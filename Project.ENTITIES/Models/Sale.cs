@@ -9,7 +9,7 @@ namespace Project.ENTITIES.Models
     public class Sale:BaseEntity
     {
        
-        public Decimal SubTotal { get; set; }
+        public decimal SubTotal { get; set; }
         public DateTime SaleDate { get; set; }
 
         //Relational Properties

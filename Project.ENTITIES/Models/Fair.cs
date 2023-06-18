@@ -17,6 +17,7 @@ namespace Project.ENTITIES.Models
 
         //Relataional Properties
         public virtual List<FairAndHall>FairAndHalls { get; set; }
+        public virtual List<FairAndGuest> FairAndGuests { get; set; }
 
         //ToDo Fuar Sektörü belirlemek için Sector Classı mı ??
 

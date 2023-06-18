@@ -51,11 +51,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Options\ApproachDocumentMap.cs" />
+    <Compile Include="Options\BaseMap.cs" />
+    <Compile Include="Options\BiddingDocumentMap.cs" />
+    <Compile Include="Options\CompanyAndCompanyTypeMap.cs" />
+    <Compile Include="Options\CompanyMap.cs" />
+    <Compile Include="Options\CompanyTypeMap.cs" />
+    <Compile Include="Options\ContractDocumentMap.cs" />
+    <Compile Include="Options\CountryMap.cs" />
+    <Compile Include="Options\EmployeeMap.cs" />
+    <Compile Include="Options\EmployeeRoleMap.cs" />
+    <Compile Include="Options\FairAndGuestMap.cs" />
+    <Compile Include="Options\FairAndHallMap.cs" />
+    <Compile Include="Options\FairMap.cs" />
+    <Compile Include="Options\GuestMap.cs" />
+    <Compile Include="Options\HallMap.cs" />
+    <Compile Include="Options\InvitedGuestAndCompanyMap.cs" />
+    <Compile Include="Options\InvitedGuestMap.cs" />
+    <Compile Include="Options\SaleMap.cs" />
+    <Compile Include="Options\SectorAndCompanyMap.cs" />
+    <Compile Include="Options\SectorMap.cs" />
+    <Compile Include="Options\StandAreaMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project.ENTITIES\Project.ENTITIES.csproj">
+      <Project>{58fa237e-4b2a-4841-82d6-917a21bc1e9e}</Project>
+      <Name>Project.ENTITIES</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

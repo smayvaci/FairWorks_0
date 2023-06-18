@@ -12,8 +12,10 @@ namespace Project.ENTITIES.Models
         public DateTime BiddingDate { get; set; }
         public DateTime BiddingDeadLine { get; set; }
         public int? ApproachDocumentID { get; set; }
+        public int? ContractDocumentID { get; set; }
 
         //Relational Properties
         public virtual ApproachDocument ApproachDocument { get; set; }
+        public virtual ContractDocument ContractDocument { get; set; }
     }
 }

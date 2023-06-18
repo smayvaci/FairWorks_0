@@ -15,9 +15,10 @@ namespace Project.ENTITIES.Models
         public bool IsOverSeas { get; set; }
         public ContractType ContractType { get; set; }
         public ContractStatus ContractStatus { get; set; }
+        public int? SaleID { get; set; }
 
         //Relational properties
-        public virtual ContractDocument ContractDocument { get; set; }
-
+        public virtual List<BiddingDocument> BiddingDocuments { get; set; }
+        public virtual Sale Sale { get; set; }
     }
 }

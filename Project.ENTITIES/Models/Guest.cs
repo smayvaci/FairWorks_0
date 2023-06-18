@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
-{
+{// 1 fuar n misafir
+ // 1 misafir n fuar
     public class Guest:BaseEntity
     {
         public string FirstName { get; set; }
@@ -15,5 +16,8 @@ namespace Project.ENTITIES.Models
         public string Address { get; set; }
         public string CompanyName { get; set; }
         public string Job { get; set; }
+
+        //relational Properties
+        public virtual List<FairAndGuest> FairAndGuests { get; set; }
     }
 }

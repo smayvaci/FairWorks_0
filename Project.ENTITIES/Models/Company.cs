@@ -15,14 +15,15 @@ namespace Project.ENTITIES.Models
         public string City { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+        public int? CountryID { get; set; }
 
         //Relational Properties 
 
         public virtual List<CompanyAndCompanyType>CompanyAndCompanyTypes { get; set; }
-        public virtual List<CountryAndCompany>CountryAndCompanies { get; set; }
+        public virtual Country Country { get; set; }
         public virtual List<InvitedGuestAndCompany>InvitedGuestAndCompanies { get; set; }
         public virtual List<SectorAndCompany>SectorAndCompanies { get; set; }
-
+        public virtual List<ApproachDocument> ApproachDocuments { get; set; }
 
 
     }
