@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-    public class Contract:BaseEntity
+    public class ContractDocument:BaseEntity
     {
-        public DateTime ContractTime { get; set; }
+        //SozlesmeBilgileri
+        public DateTime InceptionDate { get; set; }
+        public DateTime TerminationDate { get; set; }
         public bool IsOverSeas { get; set; }
         public ContractType ContractType { get; set; }
-        public DateTime ContractDeadLine { get; set; }
         public ContractStatus ContractStatus { get; set; }
 
         //Relational properties
+        public virtual ContractDocument ContractDocument { get; set; }
 
     }
 }

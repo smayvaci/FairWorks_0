@@ -13,5 +13,6 @@ namespace Project.ENTITIES.Models
         public string Description { get; set; }
 
         //Relational Properties
+        public virtual List<Employee>Employees { get; set; }
     }
 }
