@@ -11,7 +11,7 @@ namespace Project.MAP.Options
     {
         public StandAreaMap()
         {
-
+            Property(x => x.M2Price).HasColumnName("money");
         }
     }
 }

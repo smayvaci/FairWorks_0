@@ -44,6 +44,7 @@
     <Compile Include="Enums\ContractStatus.cs" />
     <Compile Include="Enums\ContractType.cs" />
     <Compile Include="Enums\DataStatus.cs" />
+    <Compile Include="Enums\StandType.cs" />
     <Compile Include="Models\ApproachDocument.cs" />
     <Compile Include="Models\BiddingDocument.cs" />
     <Compile Include="Models\CompanyAndCompanyType.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\EmployeeRole.cs" />
     <Compile Include="Models\Fair.cs" />
+    <Compile Include="Models\FairAndApproachDocument.cs" />
     <Compile Include="Models\FairAndGuest.cs" />
     <Compile Include="Models\FairAndHall.cs" />
     <Compile Include="Models\Guest.cs" />

@@ -18,5 +18,6 @@ namespace Project.ENTITIES.Models
         public virtual  Employee Employee { get; set; }
         public virtual List<BiddingDocument>BiddingDocuments { get; set; }
         public virtual Company Company { get; set; }
+        public virtual List<FairAndApproachDocument> FairAndApproachDocuments { get; set; }
     }
 }

@@ -9,8 +9,8 @@ namespace Project.ENTITIES.Models
     public class BiddingDocument:BaseEntity
     {
         //TeklifBilgileri
-        public DateTime BiddingDate { get; set; }
-        public DateTime BiddingDeadLine { get; set; }
+        public DateTime BiddingInceptionDate { get; set; }
+        public DateTime BiddingTerminationDate{ get; set; }
         public int? ApproachDocumentID { get; set; }
         public int? ContractDocumentID { get; set; }
 

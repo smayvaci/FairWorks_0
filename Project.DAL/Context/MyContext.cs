@@ -38,8 +38,10 @@ namespace Project.DAL.Context
             modelBuilder.Configurations.Add(new SectorMap());
             modelBuilder.Configurations.Add(new SectorAndCompanyMap());
             modelBuilder.Configurations.Add(new StandAreaMap());
+            modelBuilder.Configurations.Add(new FairAndApproachDocumentMap());
         }
         public DbSet<ApproachDocument> ApproachDocuments { get; set;}
+        public DbSet<FairAndApproachDocument> FairAndApproachDocuments { get; set;}
         public DbSet<BiddingDocument> BiddingDocuments { get; set;}
         public DbSet<Company> Companies { get; set;}
         public DbSet<CompanyAndCompanyType> CompanyAndCompanyTypes{ get; set;}
