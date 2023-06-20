@@ -14,7 +14,7 @@ namespace Project.BLL.DesignPatterns.SingletonPattern
 
         }
         static MyContext _dbInstance;
-        public static MyContext DbInstance
+        public static MyContext DBInstance
         { 
             get
             {

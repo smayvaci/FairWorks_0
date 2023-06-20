@@ -53,6 +53,30 @@
   <ItemGroup>
     <Compile Include="DesignPatterns\SingletonPattern\DBTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GenericRepository\BaseRep\BaseRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\ApproachDocumentRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\BiddingDocumentRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\CompanyAndCompanyTypeRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\CompanyRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\CompanyTypeRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\ContractDocumentRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\CountryRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\EmployeeRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\EmployeeRoleRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\FairAndApproachDocumentRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\FairAndGuestRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\FairAndHallRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\FairRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\GuestRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\HallRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\InvitedGuestAndCompanyRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\InvitedGuestRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\JobRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\SaleRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\SectorAndCompanyRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\SectorRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\StandAreaRepository.cs" />
+    <Compile Include="GenericRepository\IntRep\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -68,11 +92,7 @@
       <Name>Project.ENTITIES</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\BaseRep\" />
-    <Folder Include="Repositories\ConcRep\" />
-    <Folder Include="Repositories\IntRep\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

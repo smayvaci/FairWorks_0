@@ -176,6 +176,35 @@ namespace Project.DAL.Init
             context.Employees.Add(e7);
             context.SaveChanges();
             #endregion
+
+            #region CompanyType
+            CompanyType cType= new CompanyType();
+            cType.CompanyTypeName = "üretici";
+            
+            CompanyType cType2 = new CompanyType();
+            cType2.CompanyTypeName = "ithalatçı";
+            #endregion
+
+            #region Company
+            Company c= new Company();
+            c.CompanyName = "alıngan a.s";
+            c.Address = "kordon boyu cad.";
+            c.City = "izmir";
+            c.PhoneNumber = "1234566777";
+            c.UserName = "alingan";
+            c.Password = DantexCrypt.Crypt("1234");
+            #endregion
+
+            #region CompanyAndCompanyType
+            CompanyAndCompanyType cCType = new CompanyAndCompanyType();
+            cCType.CompanyTypeID = 1;
+            cCType.CompanyID = 1;
+
+            CompanyAndCompanyType eType = new CompanyAndCompanyType();
+            eType.CompanyTypeID = 2;
+            eType.CompanyID = 1;
+            #endregion
+
         }
     }
 }
