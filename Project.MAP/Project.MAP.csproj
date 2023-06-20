@@ -69,6 +69,7 @@
     <Compile Include="Options\HallMap.cs" />
     <Compile Include="Options\InvitedGuestAndCompanyMap.cs" />
     <Compile Include="Options\InvitedGuestMap.cs" />
+    <Compile Include="Options\JobMap.cs" />
     <Compile Include="Options\SaleMap.cs" />
     <Compile Include="Options\SectorAndCompanyMap.cs" />
     <Compile Include="Options\SectorMap.cs" />

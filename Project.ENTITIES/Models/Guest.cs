@@ -15,9 +15,11 @@ namespace Project.ENTITIES.Models
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
         public string CompanyName { get; set; }
-        public string Job { get; set; }
+        public int? JobID { get; set; }
+
 
         //relational Properties
         public virtual List<FairAndGuest> FairAndGuests { get; set; }
+        public virtual Job Job { get; set; }
     }
 }

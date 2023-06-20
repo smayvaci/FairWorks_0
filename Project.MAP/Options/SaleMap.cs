@@ -11,7 +11,7 @@ namespace Project.MAP.Options
     {
         public SaleMap()
         {
-            Property(x => x.SubTotal).HasColumnName("money");
+            Property(x => x.SubTotal).HasColumnType("money");
         }
     }
 }

@@ -63,6 +63,7 @@
     <Compile Include="Models\Hall.cs" />
     <Compile Include="Models\InvitedGuest.cs" />
     <Compile Include="Models\InvitedGuestAndCompany.cs" />
+    <Compile Include="Models\Job.cs" />
     <Compile Include="Models\Sale.cs" />
     <Compile Include="Models\Sector.cs" />
     <Compile Include="Models\SectorAndCompany.cs" />

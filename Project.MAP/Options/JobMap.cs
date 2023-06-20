@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace Project.MAP.Options
 {
-    public class StandAreaMap:BaseMap<StandArea>
+    public class JobMap:BaseMap<Job>
     {
-        public StandAreaMap()
+        public JobMap()
         {
-            Property(x => x.M2Price).HasColumnType("money");
+
         }
+
     }
 }

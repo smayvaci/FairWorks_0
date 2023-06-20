@@ -39,6 +39,7 @@ namespace Project.DAL.Context
             modelBuilder.Configurations.Add(new SectorAndCompanyMap());
             modelBuilder.Configurations.Add(new StandAreaMap());
             modelBuilder.Configurations.Add(new FairAndApproachDocumentMap());
+            modelBuilder.Configurations.Add(new JobMap());
         }
         public DbSet<ApproachDocument> ApproachDocuments { get; set;}
         public DbSet<FairAndApproachDocument> FairAndApproachDocuments { get; set;}
@@ -61,6 +62,7 @@ namespace Project.DAL.Context
         public DbSet<Sector>Sectors { get; set;}
         public DbSet<SectorAndCompany>SectorAndCompanies { get; set;}
         public DbSet<StandArea> StandAreas { get; set;}
+        public DbSet<Job> Jobs { get; set;}
        
 
     }
