@@ -17,5 +17,13 @@ namespace Project.VM.PureVMs
         public bool IsOverSeas { get; set; }// yurt dışından mı
         public string ContractStatus { get; set; }// yapıldı mı yapılmadı mı
         public string ContractType { get; set; }
+        public int? BiddingDocumentID { get; set; }
+        public int? CompanyID { get; set; }
+        public string CompanyName { get; set; }
+        public int? EmployeeID { get; set; }
+        public string EmployeeName { get; set; }
+        public int? StandAreaID { get; set; }
+
+
     }
 }

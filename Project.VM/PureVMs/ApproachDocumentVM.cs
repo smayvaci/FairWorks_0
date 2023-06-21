@@ -14,5 +14,15 @@ namespace Project.VM.PureVMs
         public DateTime? DeletedDate { get; set; }
         public DateTime ApproachDate { get; set; }// görüşme tarihi 
         public string ApproachNotes { get; set; }// görüşme notları
+        public int? CompanyID { get; set; }
+        public string CompanyName { get; set;}
+        public int? EmployeeID { get; set; }
+        public string EmployeeName { get; set;}
+        public int? FairID { get; set; }
+        
+
+
+
+
     }
 }

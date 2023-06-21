@@ -15,5 +15,6 @@ namespace Project.VM.PureVMs
         public string TitleName { get; set; }
         public string Department { get; set; }
         public string Description { get; set; }
+      
     }
 }

@@ -20,5 +20,11 @@ namespace Project.VM.PureVMs
         public string Email { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+        public int? CountryID { get; set; }
+        public string CountryName { get; set; }
+        public int? EmplyoeeRoleID { get; set; }
+        public string TitleName { get; set; }
+        public int? JobID { get; set; }
+        public string JobName { get; set; }
     }
 }

@@ -15,5 +15,8 @@ namespace Project.VM.PureVMs
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string InvitationCard { get; set; }
+        public int? CompanyID{ get; set; }
+        public string CompanyName { get; set;}
+
     }
 }

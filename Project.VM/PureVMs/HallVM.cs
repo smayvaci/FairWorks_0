@@ -13,5 +13,6 @@ namespace Project.VM.PureVMs
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
         public string HallNumber { get; set; }
+        public int? FairID { get; set; }
     }
 }

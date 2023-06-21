@@ -20,5 +20,6 @@ namespace Project.VM.PureVMs
         public string CompanyName { get; set; }
         public int? JobID { get; set; }
         public string JobName { get; set; }
+        public int? FairID { get; set; }
     }
 }

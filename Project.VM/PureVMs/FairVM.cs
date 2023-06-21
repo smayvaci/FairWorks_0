@@ -17,6 +17,8 @@ namespace Project.VM.PureVMs
         public DateTime StartDate { get; set; }// başlangıç tarihi
         public DateTime ExpiryDate { get; set; }// bitiş tarihi
         public string Location { get; set; }// lokasyon
+        public int? GuestID { get; set; }
+        
 
     }
 }

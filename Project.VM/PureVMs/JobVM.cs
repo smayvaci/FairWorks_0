@@ -13,5 +13,7 @@ namespace Project.VM.PureVMs
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
         public string Name { get; set; }
+
     }
+        
 }

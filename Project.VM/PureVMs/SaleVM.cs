@@ -14,5 +14,7 @@ namespace Project.VM.PureVMs
         public DateTime? DeletedDate { get; set; }
         public decimal SubTotal { get; set; }
         public DateTime SaleDate { get; set; }
+        public int? ContractDocumentID { get; set; }
+        public string MyProperty { get; set; }
     }
 }
