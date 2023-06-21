@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Project.VM.PureVMs
 {
-    internal class BiddingDocumentVM
+    public class BiddingDocumentVM
     {
+        public int ID { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
+        public DateTime? DeletedDate { get; set; }
+        public DateTime BiddingInceptionDate { get; set; }// teklif başlangıç günü
+        public DateTime BidingTerminationDate { get; set; }// teklif geçerlilik son günü
     }
 }

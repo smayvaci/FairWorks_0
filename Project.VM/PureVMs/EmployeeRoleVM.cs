@@ -12,5 +12,8 @@ namespace Project.VM.PureVMs
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
+        public string TitleName { get; set; }
+        public string Department { get; set; }
+        public string Description { get; set; }
     }
 }

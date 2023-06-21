@@ -12,5 +12,10 @@ namespace Project.VM.PureVMs
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
+        public DateTime InceptionDate { get; set; }
+        public DateTime TerminationDate { get; set; }
+        public bool IsOverSeas { get; set; }// yurt dışından mı
+        public string ContractStatus { get; set; }// yapıldı mı yapılmadı mı
+        public string ContractType { get; set; }
     }
 }
