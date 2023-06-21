@@ -42,9 +42,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PureVMs\ApproachDocumentVM.cs" />
+    <Compile Include="PureVMs\BiddingDocumentVM.cs" />
+    <Compile Include="PureVMs\CompanyTypeVM.cs" />
+    <Compile Include="PureVMs\CompanyVM.cs" />
+    <Compile Include="PureVMs\ContractDocumentVM.cs" />
+    <Compile Include="PureVMs\CountryVM.cs" />
+    <Compile Include="PureVMs\EmployeeRoleVM.cs" />
+    <Compile Include="PureVMs\EmployeeVM.cs" />
+    <Compile Include="PureVMs\FairVM.cs" />
+    <Compile Include="PureVMs\GuestVM.cs" />
+    <Compile Include="PureVMs\HallVM.cs" />
+    <Compile Include="PureVMs\InvitedGuestVM.cs" />
+    <Compile Include="PureVMs\JobVM.cs" />
+    <Compile Include="PureVMs\SaleVM.cs" />
+    <Compile Include="PureVMs\SectorVM.cs" />
+    <Compile Include="PureVMs\StandAreaVM.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PureVMs\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

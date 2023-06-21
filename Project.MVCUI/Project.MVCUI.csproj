@@ -212,7 +212,8 @@
     <Folder Include="Areas\BookKeeper\Data\BookKeeperPureVMs\" />
     <Folder Include="Areas\BookKeeper\Views\Shared\" />
     <Folder Include="Areas\Company\Controllers\" />
-    <Folder Include="Areas\Company\Data\" />
+    <Folder Include="Areas\Company\Data\CompanyPageVMs\" />
+    <Folder Include="Areas\Company\Data\CompanyPureVMs\" />
     <Folder Include="Areas\Company\Views\Shared\" />
     <Folder Include="Areas\IT\Controllers\" />
     <Folder Include="Areas\IT\Data\ITPageVMs\" />
