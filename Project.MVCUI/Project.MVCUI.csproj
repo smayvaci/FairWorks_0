@@ -134,7 +134,16 @@
     <Compile Include="Areas\OperationManager\OperationManagerAreaRegistration.cs" />
     <Compile Include="Areas\SalesEmployee\SalesEmployeeAreaRegistration.cs" />
     <Compile Include="Areas\SalesManager\SalesManagerAreaRegistration.cs" />
+    <Compile Include="Areas\SuperAdmin\Controllers\HomeController.cs" />
     <Compile Include="Areas\SuperAdmin\SuperAdminAreaRegistration.cs" />
+    <Compile Include="AuthenticanClasses\BoardAuthentication.cs" />
+    <Compile Include="AuthenticanClasses\BookKeeperAuthentication.cs" />
+    <Compile Include="AuthenticanClasses\CompanyAuthentication.cs" />
+    <Compile Include="AuthenticanClasses\ITAuthentication.cs" />
+    <Compile Include="AuthenticanClasses\OperationManagerAuthentication.cs" />
+    <Compile Include="AuthenticanClasses\SalesEmployeeAuthentication.cs" />
+    <Compile Include="AuthenticanClasses\SalesManagerAuthentication.cs" />
+    <Compile Include="AuthenticanClasses\SuperAdminAuthentication.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -231,9 +240,9 @@
     <Folder Include="Areas\SalesManager\Data\SalesManagerPageVMs\" />
     <Folder Include="Areas\SalesManager\Data\SalesManagerPureVMs\" />
     <Folder Include="Areas\SalesManager\Views\Shared\" />
-    <Folder Include="Areas\SuperAdmin\Controllers\" />
     <Folder Include="Areas\SuperAdmin\Data\SuperAdminPageVMs\" />
     <Folder Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\" />
+    <Folder Include="Areas\SuperAdmin\Views\Home\" />
     <Folder Include="Areas\SuperAdmin\Views\Shared\" />
     <Folder Include="Models\PageVMs\" />
     <Folder Include="Views\SuperAdmin\" />
