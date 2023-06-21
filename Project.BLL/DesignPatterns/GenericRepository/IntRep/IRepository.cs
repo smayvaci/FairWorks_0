@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.BLL.GenericRepository.IntRep
+namespace Project.BLL.DesignPatterns.GenericRepository.IntRep
 {
     public interface IRepository<T> where T: BaseEntity
     {

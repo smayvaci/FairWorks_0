@@ -1,5 +1,5 @@
-﻿using Project.BLL.DesignPatterns.SingletonPattern;
-using Project.BLL.Repositories.IntRep;
+﻿using Project.BLL.DesignPatterns.GenericRepository.IntRep;
+using Project.BLL.DesignPatterns.SingletonPattern;
 using Project.DAL.Context;
 using Project.ENTITIES.Models;
 using System;
@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.BLL.GenericRepository.BaseRep
+namespace Project.BLL.DesignPatterns.GenericRepository.BaseRep
 {
     public abstract class BaseRepository<T> : IRepository<T> where T : BaseEntity
     {// burada contextimizin instancenı alarak ctor içerisine yazdık. Böylelikle singleton patterni burada kullanacağız.Repositorymizin bir kere instanceı alınmış olarak tekrar tekrar insantance alınmayacak.

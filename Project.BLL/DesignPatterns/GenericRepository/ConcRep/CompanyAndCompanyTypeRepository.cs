@@ -1,4 +1,4 @@
-﻿using Project.BLL.GenericRepository.BaseRep;
+﻿using Project.BLL.DesignPatterns.GenericRepository.BaseRep;
 using Project.ENTITIES.Models;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.BLL.GenericRepository.ConcRep
+namespace Project.BLL.DesignPatterns.GenericRepository.ConcRep
 {
     public class CompanyAndCompanyTypeRepository:BaseRepository<CompanyAndCompanyType>
     {
