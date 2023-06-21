@@ -5,12 +5,15 @@ using System.Web;
 
 namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
 {
-    public class SuperCompanyTypePureVMs
+    public class SuperEmployeeRolePureVM
     {
         public int ID { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
-        public string CompanyTypeName { get; set; }
+        public string TitleName { get; set; }
+        public string Department { get; set; }
+        public string Description { get; set; }
+
     }
 }

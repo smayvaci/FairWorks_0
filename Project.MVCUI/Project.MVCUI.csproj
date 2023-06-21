@@ -134,23 +134,24 @@
     <Compile Include="Areas\OperationManager\OperationManagerAreaRegistration.cs" />
     <Compile Include="Areas\SalesEmployee\SalesEmployeeAreaRegistration.cs" />
     <Compile Include="Areas\SalesManager\SalesManagerAreaRegistration.cs" />
-    <Compile Include="Areas\SuperAdmin\Controllers\HomeController.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperApproachDocumentPureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperBiddingDocumentPureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperCompanyPureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperCompanyTypePureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperContractDocumentPureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperCountryPureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperEmployeePureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperEmployeeRolePureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperFairPureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperGuestPureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperHallPureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperInvitedGuestPureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperJobPureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperSalePureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperSectorPureVMs.cs" />
-    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperStandAreaPureVMs.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPageVMs\AddUpdateSectorPageVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPageVMs\ListSectorPageVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperApproachDocumentPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperBiddingDocumentPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperCompanyPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperCompanyTypePureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperContractDocumentPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperCountryPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperEmployeePureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperEmployeeRolePureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperFairPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperGuestPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperHallPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperInvitedGuestPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperJobPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperSalePureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperSectorPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperStandAreaPureVM.cs" />
     <Compile Include="Areas\SuperAdmin\SuperAdminAreaRegistration.cs" />
     <Compile Include="AuthenticanClasses\BoardAuthentication.cs" />
     <Compile Include="AuthenticanClasses\BookKeeperAuthentication.cs" />
@@ -160,7 +161,6 @@
     <Compile Include="AuthenticanClasses\SalesEmployeeAuthentication.cs" />
     <Compile Include="AuthenticanClasses\SalesManagerAuthentication.cs" />
     <Compile Include="AuthenticanClasses\SuperAdminAuthentication.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -200,6 +200,9 @@
     <Content Include="Areas\OperationManager\Views\web.config" />
     <Content Include="Areas\BookKeeper\Views\web.config" />
     <Content Include="Areas\Company\Views\web.config" />
+    <Content Include="Areas\SuperAdmin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\SuperAdmin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\SuperAdmin\Views\Home\ListSectors.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -256,9 +259,8 @@
     <Folder Include="Areas\SalesManager\Data\SalesManagerPageVMs\" />
     <Folder Include="Areas\SalesManager\Data\SalesManagerPureVMs\" />
     <Folder Include="Areas\SalesManager\Views\Shared\" />
-    <Folder Include="Areas\SuperAdmin\Data\SuperAdminPageVMs\" />
-    <Folder Include="Areas\SuperAdmin\Views\Home\" />
-    <Folder Include="Areas\SuperAdmin\Views\Shared\" />
+    <Folder Include="Areas\SuperAdmin\Controllers\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Models\PageVMs\" />
     <Folder Include="Views\SuperAdmin\" />
   </ItemGroup>
@@ -288,6 +290,24 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project.BLL\Project.BLL.csproj">
+      <Project>{69bb430d-1cbb-4fb5-9c99-41d7648e6eb3}</Project>
+      <Name>Project.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.COMMON\Project.COMMON.csproj">
+      <Project>{c4aea64d-cc09-447a-a36a-45f25e6bb542}</Project>
+      <Name>Project.COMMON</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.ENTITIES\Project.ENTITIES.csproj">
+      <Project>{58fa237e-4b2a-4841-82d6-917a21bc1e9e}</Project>
+      <Name>Project.ENTITIES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.VM\Project.VM.csproj">
+      <Project>{27dec7aa-11df-4b94-9446-2e9d0459cd9b}</Project>
+      <Name>Project.VM</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

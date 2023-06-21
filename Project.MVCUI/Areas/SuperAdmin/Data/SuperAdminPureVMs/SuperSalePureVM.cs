@@ -5,17 +5,15 @@ using System.Web;
 
 namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
 {
-    public class SuperInvitedGuestPureVMs
+    public class SuperSalePureVM
     {
         public int ID { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string InvitationCard { get; set; }
-        public int? CompanyID { get; set; }
-        public string CompanyName { get; set; }
-
+        public decimal SubTotal { get; set; }
+        public DateTime SaleDate { get; set; }
+        public int? ContractDocumentID { get; set; }
+        public string MyProperty { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
 {
-    public class SuperEmployeePureVMs
+    public class SuperEmployeePureVM
     {
         public int ID { get; set; }
         public DateTime CreatedDate { get; set; }

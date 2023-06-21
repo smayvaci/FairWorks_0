@@ -5,15 +5,17 @@ using System.Web;
 
 namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
 {
-    public class SuperBiddingDocumentPureVMs
+    public class SuperInvitedGuestPureVM
     {
         public int ID { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
-        public DateTime BiddingInceptionDate { get; set; }// teklif başlangıç günü
-        public DateTime BidingTerminationDate { get; set; }// teklif geçerlilik son günü
-        public int? ApproachDocumentID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string InvitationCard { get; set; }
+        public int? CompanyID { get; set; }
+        public string CompanyName { get; set; }
 
     }
 }
