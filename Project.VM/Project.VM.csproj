@@ -44,7 +44,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PureVMs\ApproachDocumentVM.cs" />
     <Compile Include="PureVMs\BiddingDocumentVM.cs" />
-    <Compile Include="PureVMs\CompanyAndCompanyTypeVM.cs" />
     <Compile Include="PureVMs\CompanyTypeVM.cs" />
     <Compile Include="PureVMs\CompanyVM.cs" />
     <Compile Include="PureVMs\ContractDocumentVM.cs" />
