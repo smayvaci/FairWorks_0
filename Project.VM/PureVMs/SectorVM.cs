@@ -12,7 +12,7 @@ namespace Project.VM.PureVMs
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
-
+        public string DataStatus { get; set; }
         public string SectorName { get; set; }
         public int CopmanyID { get; set; }
 

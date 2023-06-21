@@ -11,6 +11,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
+        public string  DataStatus { get; set; }
         public DateTime ApproachDate { get; set; }// görüşme tarihi 
         public string ApproachNotes { get; set; }// görüşme notları
         public int? CompanyID { get; set; }

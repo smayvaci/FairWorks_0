@@ -11,6 +11,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
+        public string DataStatus { get; set; }
         public string StandAreaCode { get; set; }// stand area kodu
         public string StandType { get; set; }// stand tipi hazır mı boş mu
         public double Width { get; set; }// genişlik
