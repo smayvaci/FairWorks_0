@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PureVMs\AdditionalServiceVM.cs" />
     <Compile Include="PureVMs\ApproachDocumentVM.cs" />
     <Compile Include="PureVMs\BiddingDocumentVM.cs" />
     <Compile Include="PureVMs\CompanyTypeVM.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="PureVMs\HallVM.cs" />
     <Compile Include="PureVMs\InvitedGuestVM.cs" />
     <Compile Include="PureVMs\JobVM.cs" />
+    <Compile Include="PureVMs\PaymentScheduleVM.cs" />
     <Compile Include="PureVMs\SaleVM.cs" />
     <Compile Include="PureVMs\SectorVM.cs" />
     <Compile Include="PureVMs\StandAreaVM.cs" />
