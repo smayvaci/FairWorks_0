@@ -13,7 +13,7 @@ namespace Project.ENTITIES.Models
         public DateTime InceptionDate { get; set; }
         public DateTime TerminationDate { get; set; }
         public bool IsOverSeas { get; set; }
-        public ContractType ContractType { get; set; }
+     
         public ContractStatus ContractStatus { get; set; }
         public int? SaleID { get; set; }
 

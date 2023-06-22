@@ -10,7 +10,8 @@ namespace Project.ENTITIES.Models
     public class StandArea :BaseEntity
     {
         public string StandAreaCode { get; set; }
-        public StandType StandType { get; set; }
+       
+        public bool IsReadyMadeConstruction { get; set; }
         public double Width { get; set; }
         public double Height { get; set; }
         public decimal M2Price { get; set; }

@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Enums
-{//
-    public enum  StandType
+{
+     public enum ExchangedType
     {
-        readyMadeConstruction=1,
-        EmptyStandArea=2
+        Dolar, Euro, TL
     }
 }

@@ -42,9 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\ContractStatus.cs" />
-    <Compile Include="Enums\ContractType.cs" />
     <Compile Include="Enums\DataStatus.cs" />
-    <Compile Include="Enums\StandType.cs" />
+    <Compile Include="Enums\ExchangedType.cs" />
     <Compile Include="Models\ApproachDocument.cs" />
     <Compile Include="Models\BiddingDocument.cs" />
     <Compile Include="Models\CompanyAndCompanyType.cs" />
@@ -64,9 +63,11 @@
     <Compile Include="Models\InvitedGuest.cs" />
     <Compile Include="Models\InvitedGuestAndCompany.cs" />
     <Compile Include="Models\Job.cs" />
+    <Compile Include="Models\PaymentSchedule.cs" />
     <Compile Include="Models\Sale.cs" />
     <Compile Include="Models\Sector.cs" />
     <Compile Include="Models\SectorAndCompany.cs" />
+    <Compile Include="Models\AdditionalService.cs" />
     <Compile Include="Models\StandArea.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
