@@ -12,6 +12,7 @@ namespace Project.ENTITIES.Models
         public bool CompressedAir { get; set; }// basınçlı hava
         public bool WasteWater { get; set; }// atık su
         public bool Electricity { get; set; }// elektrik
+        public decimal ExtraPrice { get; set; }
 
         //Relational Properties
         public virtual List<Sale> Sales { get; set; }

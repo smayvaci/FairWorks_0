@@ -134,6 +134,7 @@
     <Compile Include="Areas\OperationManager\OperationManagerAreaRegistration.cs" />
     <Compile Include="Areas\SalesEmployee\SalesEmployeeAreaRegistration.cs" />
     <Compile Include="Areas\SalesManager\SalesManagerAreaRegistration.cs" />
+    <Compile Include="Areas\SuperAdmin\Controllers\SectorController.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPageVMs\AddUpdateSectorPageVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPageVMs\ListSectorPageVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperApproachDocumentPureVM.cs" />
@@ -161,6 +162,7 @@
     <Compile Include="AuthenticanClasses\SalesEmployeeAuthentication.cs" />
     <Compile Include="AuthenticanClasses\SalesManagerAuthentication.cs" />
     <Compile Include="AuthenticanClasses\SuperAdminAuthentication.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -202,7 +204,7 @@
     <Content Include="Areas\Company\Views\web.config" />
     <Content Include="Areas\SuperAdmin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\SuperAdmin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\SuperAdmin\Views\Home\ListSectors.cshtml" />
+    <Content Include="Areas\SuperAdmin\Views\Sector\ListSectors.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -259,8 +261,6 @@
     <Folder Include="Areas\SalesManager\Data\SalesManagerPageVMs\" />
     <Folder Include="Areas\SalesManager\Data\SalesManagerPureVMs\" />
     <Folder Include="Areas\SalesManager\Views\Shared\" />
-    <Folder Include="Areas\SuperAdmin\Controllers\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\PageVMs\" />
     <Folder Include="Views\SuperAdmin\" />
   </ItemGroup>

@@ -40,8 +40,12 @@ namespace Project.DAL.Context
             modelBuilder.Configurations.Add(new StandAreaMap());
             modelBuilder.Configurations.Add(new FairAndApproachDocumentMap());
             modelBuilder.Configurations.Add(new JobMap());
+            modelBuilder.Configurations.Add(new AdditionalServiceMap());
+            modelBuilder.Configurations.Add(new PaymentScheduleMap());
         }
         public DbSet<ApproachDocument> ApproachDocuments { get; set;}
+        public DbSet<AdditionalService> AdditionalServices { get; set;}
+        public DbSet<PaymentSchedule> PaymentSchedules { get; set;}
         public DbSet<FairAndApproachDocument> FairAndApproachDocuments { get; set;}
         public DbSet<BiddingDocument> BiddingDocuments { get; set;}
         public DbSet<Company> Companies { get; set;}

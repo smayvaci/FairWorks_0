@@ -88,6 +88,11 @@ namespace Project.DAL.Init
             context.SaveChanges();
             #endregion
 
+            #region ForSector
+            Sector sector = new Sector();
+            sector.SectorName = "Üretici";
+            #endregion
+
             // yukarıda eklemiş olduğum rollere birer tane personel atmasını daha seedteyken yaptım. Sistemin test edilebilirliğinde daha rahat hareket edebilmek için
             #region SuperAdmin
             Employee e = new Employee();
