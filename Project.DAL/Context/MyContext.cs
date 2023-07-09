@@ -42,6 +42,9 @@ namespace Project.DAL.Context
             modelBuilder.Configurations.Add(new JobMap());
             modelBuilder.Configurations.Add(new AdditionalServiceMap());
             modelBuilder.Configurations.Add(new PaymentScheduleMap());
+            modelBuilder.Configurations.Add(new ExchangeTypeMap());
+            modelBuilder.Configurations.Add(new ExchangeTypeAndPaymentScheduleMap());
+
         }
         public DbSet<ApproachDocument> ApproachDocuments { get; set;}
         public DbSet<AdditionalService> AdditionalServices { get; set;}
@@ -67,6 +70,8 @@ namespace Project.DAL.Context
         public DbSet<SectorAndCompany>SectorAndCompanies { get; set;}
         public DbSet<StandArea> StandAreas { get; set;}
         public DbSet<Job> Jobs { get; set;}
+        public DbSet<ExchangeType> ExchangeTypes { get; set;}
+        public DbSet<ExchangeTypeAndPaymentSchedule> ExchangeTypeAndPaymentSchedules { get; set;}
        
 
     }

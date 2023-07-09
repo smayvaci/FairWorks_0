@@ -51,6 +51,7 @@
     <Compile Include="PureVMs\CountryVM.cs" />
     <Compile Include="PureVMs\EmployeeRoleVM.cs" />
     <Compile Include="PureVMs\EmployeeVM.cs" />
+    <Compile Include="PureVMs\ExchangeTypeVM.cs" />
     <Compile Include="PureVMs\FairVM.cs" />
     <Compile Include="PureVMs\GuestVM.cs" />
     <Compile Include="PureVMs\HallVM.cs" />

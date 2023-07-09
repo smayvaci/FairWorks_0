@@ -11,12 +11,12 @@ namespace Project.ENTITIES.Models
     {
         public double DiscountRate { get; set; } //İndirim Oranı
         public int PaymentTerms { get; set; } //Vade Planı;taksit hesaplaması için int tipi verdik.
-        public decimal Totalprice { get; set; } // Toplam Tutar
+        public decimal TotalPrice { get; set; } // Toplam Tutar
         public decimal RemainingBalance { get; set; }//Kalan Ödeme
-        public decimal ExchangeRate { get; set; }//Döviz Kuru; Elle Girilebilir(TextBox)
-        public ExchangedType ExchangedType { get; set; }
-
+        
+        
         //Relational Properties
         public virtual List<Sale> Sales { get; set; }
+        public virtual List<ExchangeType> ExchangeTypes { get; set; }
     }
 }

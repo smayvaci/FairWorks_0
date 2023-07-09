@@ -62,6 +62,8 @@
     <Compile Include="Options\CountryMap.cs" />
     <Compile Include="Options\EmployeeMap.cs" />
     <Compile Include="Options\EmployeeRoleMap.cs" />
+    <Compile Include="Options\ExchangeTypeAndPaymentScheduleMap.cs" />
+    <Compile Include="Options\ExchangeTypeMap.cs" />
     <Compile Include="Options\FairAndApproachDocumentMap.cs" />
     <Compile Include="Options\FairAndGuestMap.cs" />
     <Compile Include="Options\FairAndHallMap.cs" />

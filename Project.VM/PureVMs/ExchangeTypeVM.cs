@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.ENTITIES.Enums
+namespace Project.VM.PureVMs
 {
-     public enum ExchangedType
+    internal class ExchangeTypeVM
     {
-        Dolar, Euro, TL
     }
 }
