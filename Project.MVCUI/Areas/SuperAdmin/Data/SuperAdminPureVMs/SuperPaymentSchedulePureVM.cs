@@ -17,7 +17,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
         public decimal Totalprice { get; set; } // Toplam Tutar
         public decimal RemainingBalance { get; set; }//Kalan Ödeme
         public decimal CurrencyRate { get; set; }//Döviz Kuru; Elle Girilebilir(TextBox)
-        public string ExchangedType { get; set; }
+        public string CurrencyUnit { get; set; }
         public int? SaleID { get; set; }
     }
 }

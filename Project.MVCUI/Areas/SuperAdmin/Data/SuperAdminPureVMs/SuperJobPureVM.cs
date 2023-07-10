@@ -12,7 +12,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
         public string DataStatus { get; set; }
-        public string Name { get; set; }
+        public string JobName { get; set; }
 
     }
 }
