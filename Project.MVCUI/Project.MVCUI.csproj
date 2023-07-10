@@ -139,6 +139,7 @@
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPageVMs\AddUpdateSectorPageVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPageVMs\ListCompanyPageVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPageVMs\ListSectorPageVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperAdditionalServicePureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperApproachDocumentPureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperBiddingDocumentPureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperCompanyPureVM.cs" />
@@ -147,11 +148,13 @@
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperCountryPureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperEmployeePureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperEmployeeRolePureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperExchangeTypePureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperFairPureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperGuestPureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperHallPureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperInvitedGuestPureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperJobPureVM.cs" />
+    <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperPaymentSchedulePureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperSalePureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperSectorPureVM.cs" />
     <Compile Include="Areas\SuperAdmin\Data\SuperAdminPureVMs\SuperStandAreaPureVM.cs" />

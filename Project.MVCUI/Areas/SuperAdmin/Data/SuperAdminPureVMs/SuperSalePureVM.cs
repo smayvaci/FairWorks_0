@@ -15,6 +15,6 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
         public decimal SubTotal { get; set; }
         public DateTime SaleDate { get; set; }
         public int? ContractDocumentID { get; set; }
-        public string MyProperty { get; set; }
+        
     }
 }

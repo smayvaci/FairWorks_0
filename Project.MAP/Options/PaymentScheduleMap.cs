@@ -13,7 +13,7 @@ namespace Project.MAP.Options
         {
             Property(x => x.Totalprice).HasColumnType("money");
             Property(x=>x.RemainingBalance).HasColumnType("money");
-            Property(x=>x.ExchangeRate).HasColumnType("money");
+            Property(x=>x.CurrencyRate).HasColumnType("money");
         }
     }
 }
