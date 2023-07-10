@@ -13,19 +13,15 @@ namespace Project.BLL.DesignPatterns.GenericRepository.ConcRep
     {
         public override void Update(CompanyAndCompanyType item)
         {
-           // item.DataStatus = ENTITIES.Enums.DataStatus.Updated;
-          //  item.UpdatedDate = DateTime.Now;
-          //  CompanyAndCompanyType ctype = _db.CompanyAndCompanyTypes.FirstOrDefault(x => x.CompanyID == item.CompanyTypeID && x.CompanyTypeID == item.CompanyTypeID);
-         //   CompanyAndCompanyType toBeUpdated = ctype;
-          //  _db.Entry(toBeUpdated).CurrentValues.SetValues(item);
-           // Save();
-
-
             item.DataStatus = ENTITIES.Enums.DataStatus.Updated;
             item.UpdatedDate = DateTime.Now;
             CompanyAndCompanyType toBeUpdated = Find(item.CompanyID, item.CompanyTypeID);
             _db.Entry(toBeUpdated).CurrentValues.SetValues(item);
             Save();
-           }
+        }
+        public override void UpdateRange(List<CompanyAndCompanyType> list)
+        {
+            foreach (CompanyAndCompanyType item in list) Update(item);
+        }
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
+namespace Project.MVCUI.Areas.ExtraEmployee.Data.ExtraEmployeePureVMs
 {
-    public class SaleJobPureVM
+    public class ExtraJobPureVM
     {
         public int ID { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -13,6 +13,5 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
         public DateTime? DeletedDate { get; set; }
         public string DataStatus { get; set; }
         public string JobName { get; set; }
-
     }
 }

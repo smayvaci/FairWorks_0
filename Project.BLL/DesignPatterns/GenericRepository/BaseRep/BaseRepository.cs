@@ -65,7 +65,7 @@ namespace Project.BLL.DesignPatterns.GenericRepository.BaseRep
             Save();
         }
 
-        public T Find(params int[] id) // id üzerinden bir veriyi bulmamızı sağlar
+        public T Find(params object[] id) // id üzerinden bir veriyi bulmamızı sağlar
         {
             return _db.Set<T>().Find(id);
         }
@@ -124,7 +124,7 @@ namespace Project.BLL.DesignPatterns.GenericRepository.BaseRep
             Save();
         }
 
-        public void UpdateRange(List<T> list) // birden fazla veriyi güncellemek için kullanılır
+        public virtual void UpdateRange(List<T> list) // birden fazla veriyi güncellemek için kullanılır
         {
             foreach (T item in list) Update(item);
         }

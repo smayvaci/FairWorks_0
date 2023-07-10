@@ -10,5 +10,17 @@ namespace Project.BLL.DesignPatterns.GenericRepository.ConcRep
 {
     public class FairAndHallRepository:BaseRepository<FairAndHall>
     {
+        public override void Update(FairAndHall item)
+        {
+            item.DataStatus = ENTITIES.Enums.DataStatus.Updated;
+            item.UpdatedDate = DateTime.Now;
+            FairAndHall toBeUpdated = Find(item.FairID, item.HallID);
+            _db.Entry(toBeUpdated).CurrentValues.SetValues(item);
+            Save();
+        }
+        public override void UpdateRange(List<FairAndHall> list)
+        {
+            foreach (FairAndHall item in list) Update(item);
+        }
     }
 }
