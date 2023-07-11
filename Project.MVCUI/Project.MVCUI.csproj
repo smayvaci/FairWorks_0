@@ -129,10 +129,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Board\BoardAreaRegistration.cs" />
     <Compile Include="Areas\BookKeeper\BookKeeperAreaRegistration.cs" />
+    <Compile Include="Areas\BookKeeper\Data\BookKeeperPageVMs\AddUpdateCompanyPaymentPageVM.cs" />
+    <Compile Include="Areas\BookKeeper\Data\BookKeeperPageVMs\AddUpdateFairFinancialTurnoverPageVM.cs" />
+    <Compile Include="Areas\BookKeeper\Data\BookKeeperPageVMs\ListCompanyPaymentPageVM.cs" />
+    <Compile Include="Areas\BookKeeper\Data\BookKeeperPageVMs\ListFairFinancialTuroverPageVM.cs" />
     <Compile Include="Areas\BookKeeper\Data\BookKeeperPureVMs\BookCompanyPureVM.cs" />
     <Compile Include="Areas\BookKeeper\Data\BookKeeperPureVMs\BookExchangeType.cs" />
     <Compile Include="Areas\BookKeeper\Data\BookKeeperPureVMs\BookFairPureVM.cs" />
     <Compile Include="Areas\BookKeeper\Data\BookKeeperPureVMs\BookPaymentSchedulePureVM.cs" />
+    <Compile Include="Areas\BookKeeper\Data\BookKeeperPureVMs\BookSalePureVM.cs" />
+    <Compile Include="Areas\BookKeeper\Data\BookKeeperPureVMs\BookContractDocumentPureVM.cs" />
+    <Compile Include="Areas\BookKeeper\Data\BookKeeperPureVMs\BookBiddingDocumentPureVM.cs" />
     <Compile Include="Areas\Company\CompanyAreaRegistration.cs" />
     <Compile Include="Areas\Company\Data\CompanyPureVMs\CompanyAdditionalServicePureVM.cs" />
     <Compile Include="Areas\Company\Data\CompanyPureVMs\CompanyApproachDocumentPureVM.cs" />
@@ -318,7 +325,6 @@
     <Folder Include="Areas\Board\Data\BoardPureVMs\" />
     <Folder Include="Areas\Board\Views\Shared\" />
     <Folder Include="Areas\BookKeeper\Controllers\" />
-    <Folder Include="Areas\BookKeeper\Data\BookKeeperPageVMs\" />
     <Folder Include="Areas\BookKeeper\Views\Shared\" />
     <Folder Include="Areas\Company\Controllers\" />
     <Folder Include="Areas\Company\Data\CompanyPageVMs\" />

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Project.MVCUI.Areas.SalesEmployee.Data.SalesEmployeePureVMs
 {
-    public class BookCompanyPureVM
+    public class SaleCompanyPureVM
     {
         public int ID { get; set; }
         public DateTime CreatedDate { get; set; }
