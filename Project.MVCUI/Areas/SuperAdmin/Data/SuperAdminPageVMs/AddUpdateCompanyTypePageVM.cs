@@ -9,7 +9,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
     public class AddUpdateCompanyTypePageVM
     {
         public SuperCompanyTypePureVM  CompanyType { get; set; }
-        public List<SuperSalesPureVM> Companies { get; set; }
+        
 
     }
 }

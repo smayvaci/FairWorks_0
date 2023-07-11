@@ -9,8 +9,8 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
     public class AddUpdateStandAreaPageVM
     {
         public SuperStandAreaPureVM StandArea { get; set; }
-        public List<SuperHallPureVM> Halls { get; set; }
-        public List<SuperFairPureVM> Fairs { get; set; }
+        
+        
 
     }
 }

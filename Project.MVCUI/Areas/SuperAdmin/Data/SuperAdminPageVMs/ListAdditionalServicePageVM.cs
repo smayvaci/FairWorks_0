@@ -9,6 +9,6 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
     public class ListAdditionalServicePageVM
     {
         public List<SuperAdditionalServicePureVM> AdditionalServices { get; set; }
-        public List<SuperSalesPureVM> Sales { get; set; }
+        
     }
 }

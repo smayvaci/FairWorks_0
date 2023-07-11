@@ -9,10 +9,10 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
     public class AddUpdateFairPageVM
     {
         public SuperFairPureVM Fair { get; set; }
-        public List<SuperCountryPureVM> Counties { get; set; }
+        
         public List<SuperHallPureVM> Halls { get; set; }
-        public List<SuperStandAreaPureVM> Standareas { get; set; }
-        public List<SuperEmployeePureVM> Employees { get; set; }
-        public List<SuperEmployeeRolePureVM> EmployeeRoles { get; set; }
+        public List<SuperStandAreaPureVM> StandAreas { get; set; }
+       
+       
     }
 }

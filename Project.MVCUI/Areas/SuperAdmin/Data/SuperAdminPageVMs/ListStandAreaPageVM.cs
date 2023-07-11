@@ -8,8 +8,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
 {
     public class ListStandAreaPageVM
     {
-        public List<SuperHallPureVM> Halls { get; set; }
         public List<SuperStandAreaPureVM> Areas { get; set; }
-        public List<SuperFairPureVM> Fairs { get; set; }
+       
     }
 }

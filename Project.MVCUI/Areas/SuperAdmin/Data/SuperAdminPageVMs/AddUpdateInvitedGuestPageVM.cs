@@ -10,7 +10,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
     {
         public SuperInvitedGuestPureVM InvitedGuest { get; set; }
         public List<SuperFairPureVM> Fairs { get; set; }
-        public List<SuperSalePureVM> Sales { get; set; }
+        public List<SuperCompanyPureVM>Companies { get; set; }
         public List<SuperEmployeePureVM> Employees { get; set; }
 
 

@@ -9,7 +9,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
     public class ListApproachDocumentPageVM
     {
         public List<SuperApproachDocumentPureVM> ApproachDocuments{ get; set; }
-        public List<SuperSalesPureVM> Companies { get; set; }
+        public List<SuperCompanyPureVM> Companies { get; set; }
         public List<SuperEmployeePureVM> Employees { get; set; }
 
     }

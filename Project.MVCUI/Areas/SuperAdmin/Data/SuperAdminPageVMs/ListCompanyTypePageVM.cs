@@ -8,7 +8,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
 {
     public class ListCompanyTypePageVM
     {
-        public List<SuperSalesPureVM> Companies { get; set; }
-        public List<SuperSalesPureVM> Companies { get; set; }
+        public List<SuperCompanyTypePureVM> CompanyTypes { get; set; }
+        
     }
 }

@@ -14,7 +14,7 @@ namespace Project.VM.PureVMs
         public DateTime? DeletedDate { get; set; }
         public string DataStatus { get; set; }
         public string SectorName { get; set; }
-        public int CopmanyID { get; set; }
+        public int? CompanyID { get; set; }
 
     }
 }

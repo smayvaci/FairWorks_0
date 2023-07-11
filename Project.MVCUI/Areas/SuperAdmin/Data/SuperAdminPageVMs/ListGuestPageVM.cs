@@ -8,7 +8,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
 {
     public class ListGuestPageVM
     {
-        public List<SuperGuestPureVM>  Guest { get; set; }
+        public List<SuperGuestPureVM>  Guests { get; set; }
         public List<SuperJobPureVM> Jobs { get; set; }
     }
 }

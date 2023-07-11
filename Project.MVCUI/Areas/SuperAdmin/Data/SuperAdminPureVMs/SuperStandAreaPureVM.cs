@@ -18,6 +18,6 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
         public double Height { get; set; }// uzunluk
         public decimal M2Price { get; set; }// m2 fiyatı
         public int? HallID { get; set; }
-        public int? HallTypeID { get; set; }
+        public int? HallTypeID { get; set; }//todo bak bi
     }
 }

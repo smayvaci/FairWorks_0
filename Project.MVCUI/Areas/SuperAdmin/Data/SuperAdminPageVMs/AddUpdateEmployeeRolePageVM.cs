@@ -9,6 +9,6 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
     public class AddUpdateEmployeeRolePageVM
     {
         public SuperEmployeeRolePureVM EmployeeRole { get; set; }
-        public List<SuperEmployeePureVM> Employees { get; set; }
+      
     }
 }

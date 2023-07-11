@@ -8,8 +8,8 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
 {
     public class ListPaymentSchedulePageVM
     {
-        public List<SuperCompanyPureVM> MyProperty { get; set; }
-        public List<SuperSalesPureVM> Sales { get; set; }
+        public List<SuperPaymentSchedulePureVM> PaymentSchedules { get; set; }
+        public List<SuperSalePureVM> Sales { get; set; }
         public List<SuperCompanyPureVM> Companies { get; set; }
         public List<SuperContractDocumentPureVM> ContractDocuments { get; set; }
         public List<SuperExchangeTypePureVM> ExchangeTypes { get; set; }
