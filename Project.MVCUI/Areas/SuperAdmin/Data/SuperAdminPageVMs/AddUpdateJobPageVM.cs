@@ -7,5 +7,8 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
 {
     public class AddUpdateJobPageVM
     {
+        public SuperCompanyPureVM Job { get; set; }
     }
+
+   
 }

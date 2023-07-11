@@ -9,5 +9,6 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
     public class AddUpdateSectorPageVM
     {
         public SuperSectorPureVM Sector { get; set; }
+       
     }
 }

@@ -7,5 +7,6 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
 {
     public class ListJobPageVM
     {
+        public List<SuperCompanyPureVM> Jobs { get; set; }
     }
 }
