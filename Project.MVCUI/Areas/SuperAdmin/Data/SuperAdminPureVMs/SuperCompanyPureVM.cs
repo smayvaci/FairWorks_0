@@ -21,6 +21,9 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
         public string Password { get; set; }
         public int? CompanyTypeID { get; set; }
         public string CompanyTypeName { get; set; }
-        
+        public int? CountryID { get; set; }
+        public string CountryName { get; set; }
+        public int? SectorID { get; set; }
+        public string SectorName { get; set; }
     }
 }

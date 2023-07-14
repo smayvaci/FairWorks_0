@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\AdditionalServiceRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRep\ExchangeTypeAndPaymentScheduleRepository.cs" />
+    <Compile Include="DesignPatterns\GenericRepository\ConcRep\ExchangeTypeRepository.cs" />
     <Compile Include="DesignPatterns\GenericRepository\ConcRep\PaymentScheduleRepository.cs" />
     <Compile Include="DesignPatterns\SingletonPattern\DBTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

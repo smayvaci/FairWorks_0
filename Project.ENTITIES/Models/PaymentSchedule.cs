@@ -17,6 +17,6 @@ namespace Project.ENTITIES.Models
         
         //Relational Properties
         public virtual List<Sale> Sales { get; set; }
-        public virtual List<ExchangeType> ExchangeTypes { get; set; }
+        public virtual List<ExchangeTypeAndPaymentSchedule> ExchangeTypePaymentSchedules { get; set; }
     }
 }

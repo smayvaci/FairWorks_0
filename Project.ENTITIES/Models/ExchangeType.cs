@@ -13,6 +13,6 @@ namespace Project.ENTITIES.Models
         public decimal CurrencyRate { get; set; }
 
         //Relational Properties
-        public virtual List<PaymentSchedule> PaymentSchedules { get; set; }
+        public virtual List<ExchangeTypeAndPaymentSchedule> ExchangeTypeAndPaymentSchedules { get; set; }
     }
 }

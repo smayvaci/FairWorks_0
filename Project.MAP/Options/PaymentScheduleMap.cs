@@ -11,9 +11,9 @@ namespace Project.MAP.Options
     {
         public PaymentScheduleMap()
         {
-            Property(x => x.Totalprice).HasColumnType("money");
+            Property(x => x.TotalPrice).HasColumnType("money");
             Property(x=>x.RemainingBalance).HasColumnType("money");
-            Property(x=>x.CurrencyRate).HasColumnType("money");
+           
         }
     }
 }

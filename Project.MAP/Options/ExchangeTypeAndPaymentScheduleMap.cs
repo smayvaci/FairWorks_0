@@ -11,7 +11,12 @@ namespace Project.MAP.Options
     {
         public ExchangeTypeAndPaymentScheduleMap()
         {
-
+            Ignore(x => x.ID);
+            HasKey(x => new
+            {
+                x.PaymentScheduleID,
+                x.ExchangeTypeID
+            });
         }
     }
 }

@@ -4,32 +4,43 @@
     ViewBag.Title = "Sectors";
 }
 
-<h1>Sectors</h1>
+<header class="panel-heading">
+    @Html.ActionLink("Sektör ekle","AddSector",null,new {@class="btn btn-primary"})
+</header>
+<div class="panel-body">
+    <div class="adv-table">
+        <table cellpadding="0" border="0" class="display table table-bordered" id="hidden-table-info">
+            <thead>
+                <tr>
+                    <th>Sektör Adı </th>
+                    <th class="hidden-phone"> Durum </th>
+                    <th class="hidden-phone">  Yaratma Tarihi  </th>
+                    <th class="hidden-phone">  Güncelleme Tarihi  </th>
+                    <th class="hidden-phone">  Silme Tarihi  </th>
+                    <th class="hidden-phone">  Sil </th>
+                    <th class="hidden-phone">  Güncelle  </th>
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Sector Name</th>
-            <th>Created Date</th>
-            <th>Updated Date</th>
-            <th>Deleted Date</th>
-            <th>Data Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var sector in Model.Sectors)
-        {
-            <tr>
-                <td>@sector.ID</td>
-                <td>@sector.SectorName</td>
-                <td>@sector.CreatedDate</td>
-                <td>@sector.UpdatedDate</td>
-                <td>@sector.DeletedDate</td>
-                <td>@sector.DataStatus</td>
-            </tr>
-        }
-    </tbody>
-</table>
-
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (SuperSectorPureVM item in Model.Sectors)
+                {
+                    <tr class="grandeX">
+                        <td class="hidden-phone">@item.SectorName</td>
+                        <td class="hidden-phone">@item.DataStatus</td>
+                        <td class="hidden-phone">@item.CreatedDate</td>
+                        <td class="hidden-phone">@item.UpdatedDate</td>
+                        <td class="hidden-phone">@item.DeletedDate</td>
+                        <td class="hidden-phone">@Html.ActionLink("Sil", "DeleteSector", new { id = item.ID }, new
+                                            { @class = "btn btn-danger" })</td>
+                        <td class="hidden-phone">@Html.ActionLink("Güncelle", "UpdateSector", new { id = item.ID }, new  {@class="btn btn-warning" })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+ <a href="http://localhost:50423/SuperAdmin/Home/Index" class="btn btn-primary">Ana Sayfa</a> 
+</div>
 

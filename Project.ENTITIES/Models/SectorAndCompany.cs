@@ -8,8 +8,8 @@ namespace Project.ENTITIES.Models
 {
     public class SectorAndCompany:BaseEntity
     {   //JunctionTable
-        public string SectorID { get; set; }
-        public string CompanyID { get; set; }
+        public int SectorID { get; set; }
+        public int CompanyID { get; set; }
 
         //Relational Properties
         public virtual Sector  Sector{ get; set; }

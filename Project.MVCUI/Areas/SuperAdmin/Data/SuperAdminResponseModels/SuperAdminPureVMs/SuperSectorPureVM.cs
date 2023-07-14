@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs
+namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminResponseModels.SuperAdminPureVMs
 {
     public class SuperSectorPureVM
     {

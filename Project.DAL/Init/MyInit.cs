@@ -79,18 +79,13 @@ namespace Project.DAL.Init
             context.SaveChanges();
             #endregion
 
-            #region RoleForExtraEmployee
-            EmployeeRole eRole7 = new EmployeeRole();
-            eRole7.TitleName = "Extra Employee";
-            eRole7.Department = "Sale Department";
-            eRole7.Description = "Gelen ziyaretçilerin kayıtları alınır ve bilgileri güncellenir.";
+            #region RoleForExtraPerson
+            EmployeeRole eRole7= new EmployeeRole();
+            eRole7.TitleName = "ExtraEmployee";
+            eRole7.Department = "Sales Department";
+            eRole7.Description = "Gelen Ziyaretçilerin Kayıt işlemlerini yapar.";
             context.EmployeeRoles.Add(eRole7);
             context.SaveChanges();
-            #endregion
-
-            #region ForSector
-            Sector sector = new Sector();
-            sector.SectorName = "Üretici";
             #endregion
 
             // yukarıda eklemiş olduğum rollere birer tane personel atmasını daha seedteyken yaptım. Sistemin test edilebilirliğinde daha rahat hareket edebilmek için
@@ -132,6 +127,7 @@ namespace Project.DAL.Init
             e3.FirstName = "Can";
             e3.LastName = "Toparlak";
             e3.UserName = "CToparlak";
+            e3.ReportTo = 3;
             e3.Password = DantexCrypt.Crypt("1234");
             e3.EmployeeRole = eRole3;
             context.Employees.Add(e3);
@@ -172,43 +168,16 @@ namespace Project.DAL.Init
             #endregion
 
             #region ExtraEmployee
-            Employee e7 = new Employee();
-            e7.FirstName = "Mücahit";
-            e7.LastName = "Temizpak";
-            e7.UserName = "MTemizpak";
+            Employee e7= new Employee();
+            e7.FirstName = "Salma";
+            e7.LastName = "Durmaz";
+            e7.UserName = "SDurmaz";
             e7.Password = DantexCrypt.Crypt("1234");
             e7.EmployeeRole = eRole7;
             context.Employees.Add(e7);
             context.SaveChanges();
             #endregion
 
-            #region CompanyType
-            CompanyType cType= new CompanyType();
-            cType.CompanyTypeName = "üretici";
-            
-            CompanyType cType2 = new CompanyType();
-            cType2.CompanyTypeName = "ithalatçı";
-            #endregion
-
-            #region Company
-            Company c= new Company();
-            c.CompanyName = "alıngan a.s";
-            c.Address = "kordon boyu cad.";
-            c.City = "izmir";
-            c.PhoneNumber = "1234566777";
-            c.UserName = "alingan";
-            c.Password = DantexCrypt.Crypt("1234");
-            #endregion
-
-            #region CompanyAndCompanyType
-            CompanyAndCompanyType cCType = new CompanyAndCompanyType();
-            cCType.CompanyTypeID = 1;
-            cCType.CompanyID = 1;
-
-            CompanyAndCompanyType eType = new CompanyAndCompanyType();
-            eType.CompanyTypeID = 2;
-            eType.CompanyID = 1;
-            #endregion
 
         }
     }
