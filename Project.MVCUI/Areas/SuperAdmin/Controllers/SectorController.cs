@@ -19,10 +19,6 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             _sRep = new SectorRepository();
         }
         // GET: SuperAdmin/Sector
-        public ActionResult Index()
-        {
-            return View();
-        }
         public ActionResult ListSectors(int? id)
         {
             List<SuperSectorPureVM> sectors;
@@ -40,7 +36,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             }
             else 
             {
-                sectors=_sRep.Where(x=>x.ID==id).Select(x=> new SuperSectorPureVM 
+                sectors = _sRep.Select(x=> new SuperSectorPureVM 
                 {
                     ID = x.ID,
                     SectorName = x.SectorName,

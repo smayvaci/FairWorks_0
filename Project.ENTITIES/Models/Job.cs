@@ -12,5 +12,6 @@ namespace Project.ENTITIES.Models
 
         //Relational Properties
         public virtual List<Guest>Guests { get; set; }
+        public string JobName { get; set; }
     }
 }

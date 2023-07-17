@@ -1,4 +1,5 @@
 ﻿using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,9 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
 {
     public class AddUpdateFairPageVM
     {
-        public SuperFairPureVM Fair { get; set; }
+        public UpdateFairRequestModel Fair { get; set; }
         
-        public List<SuperHallPureVM> Halls { get; set; }
-        public List<SuperStandAreaPureVM> StandAreas { get; set; }
+      
        
        
     }

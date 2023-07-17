@@ -51,7 +51,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
 
             }).ToList();
         }
-        private List<SuperCountryPureVM> GetCountries()
+        private List<Data.SuperAdminResponseModels.SuperAdminPureVMs.SuperCountryPureVM> GetCountries()
         {
             return _cnrtyRep.Select(con => new SuperCountryPureVM
             {
@@ -74,7 +74,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         {
             List<SuperCompanyPureVM> com = GetCompanies();
             List<SuperCompanyTypePureVM> CompanyTypes = GetCompaniesTypes();
-            List<SuperCountryPureVM> countries = GetCountries();
+            List<Data.SuperAdminResponseModels.SuperAdminPureVMs.SuperCountryPureVM> countries = GetCountries();
             List<SuperSectorPureVM> sectors= GetSectors();
             ListCompanyPageVM cpm = new ListCompanyPageVM
             {
@@ -89,7 +89,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         public ActionResult AddCompany()
         {
             List<SuperCompanyTypePureVM> CompanyTypes = GetCompaniesTypes();
-            List<SuperCountryPureVM> countries = GetCountries();
+            List<Data.SuperAdminResponseModels.SuperAdminPureVMs.SuperCountryPureVM> countries = GetCountries();
             List<SuperSectorPureVM> sectors = GetSectors();
             AddUpdateCompanyPageVM add = new AddUpdateCompanyPageVM
             {

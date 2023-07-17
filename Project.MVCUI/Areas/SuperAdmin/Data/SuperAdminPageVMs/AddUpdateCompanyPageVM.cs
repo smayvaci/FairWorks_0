@@ -11,7 +11,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs
     {
         public SuperCompanyPureVM Company { get; set; }
         public List<SuperCompanyTypePureVM> CompanyTypes { get; set; }
-        public List<SuperCountryPureVM> Countries { get; set; }
+        
         public List<SuperSectorPureVM> Sectors { get; set; }
        
 

@@ -9,6 +9,8 @@ namespace Project.ENTITIES.Models
 {
     public class StandArea :BaseEntity
     {
+        public string StandType;
+
         public string StandAreaCode { get; set; }
        
         public bool IsReadyMadeConstruction { get; set; }

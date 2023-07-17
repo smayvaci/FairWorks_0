@@ -26,6 +26,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             {
                 countries = _cRep.Select(x => new SuperCountryPureVM
                 {
+                    ID = x.ID,
                     CountryName = x.CountryName,
                     DataStatus = x.DataStatus.ToString(),
                     CreatedDate = x.CreatedDate,
@@ -38,6 +39,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             {
                 countries = _cRep.Select(x => new SuperCountryPureVM
                 {
+                    ID = x.ID, 
                     CountryName = x.CountryName,
                     DataStatus = x.DataStatus.ToString(),
                     CreatedDate = x.CreatedDate,
@@ -111,7 +113,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         public ActionResult DeleteCountry(int id)
         {
             _cRep.Delete(_cRep.Find(id));
-            return RedirectToAction("ListCategories");
+            return RedirectToAction("ListCountries");
         }
     }
 }
