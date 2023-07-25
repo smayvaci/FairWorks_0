@@ -10,6 +10,6 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.UpdatePageVMs
     public class UpdateEmployeePageVM
     {
         public UpdateEmployeeRequestModel Employee { get; set; }
-        public List<UpdateEmployeeRoleRequestModel> EmployeeRoles { get; set; }
+        public List<SuperEmployeeRolePureVM> EmployeeRoles { get; set; }
     }
 }

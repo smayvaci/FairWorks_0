@@ -183,7 +183,10 @@
     <Compile Include="Areas\SalesManager\SalesManagerAreaRegistration.cs" />
     <Compile Include="Areas\SuperAdmin\Controllers\AdditionalServiceController.cs" />
     <Compile Include="Areas\SuperAdmin\Controllers\CompanyController.cs" />
+    <Compile Include="Areas\SuperAdmin\Controllers\CompanyTypeController.cs" />
     <Compile Include="Areas\SuperAdmin\Controllers\CountryController.cs" />
+    <Compile Include="Areas\SuperAdmin\Controllers\EmployeeController.cs" />
+    <Compile Include="Areas\SuperAdmin\Controllers\EmployeeRoleController.cs" />
     <Compile Include="Areas\SuperAdmin\Controllers\FairController.cs" />
     <Compile Include="Areas\SuperAdmin\Controllers\HallController.cs" />
     <Compile Include="Areas\SuperAdmin\Controllers\HomeController.cs" />
