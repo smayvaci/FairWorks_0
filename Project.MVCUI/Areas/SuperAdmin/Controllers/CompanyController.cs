@@ -1,6 +1,8 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRep;
 using Project.ENTITIES.Models;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.ListPageVMs;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.UpdatePageVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminResponseModels.SuperAdminPureVMs;
 using System;
@@ -51,7 +53,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
 
             }).ToList();
         }
-        private List<Data.SuperAdminResponseModels.SuperAdminPureVMs.SuperCountryPureVM> GetCountries()
+        private List<SuperCountryPureVM> GetCountries()
         {
             return _cnrtyRep.Select(con => new SuperCountryPureVM
             {
@@ -74,7 +76,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         {
             List<SuperCompanyPureVM> com = GetCompanies();
             List<SuperCompanyTypePureVM> CompanyTypes = GetCompaniesTypes();
-            List<Data.SuperAdminResponseModels.SuperAdminPureVMs.SuperCountryPureVM> countries = GetCountries();
+            List<SuperCountryPureVM> countries = GetCountries();
             List<SuperSectorPureVM> sectors= GetSectors();
             ListCompanyPageVM cpm = new ListCompanyPageVM
             {
@@ -88,17 +90,8 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         }
         public ActionResult AddCompany()
         {
-            List<SuperCompanyTypePureVM> CompanyTypes = GetCompaniesTypes();
-            List<Data.SuperAdminResponseModels.SuperAdminPureVMs.SuperCountryPureVM> countries = GetCountries();
-            List<SuperSectorPureVM> sectors = GetSectors();
-            AddUpdateCompanyPageVM add = new AddUpdateCompanyPageVM
-            {
-                CompanyTypes = CompanyTypes,
-                Sectors = sectors,
-                Countries = countries,
-            };
 
-            return View(add);
+            return View();
         }
         [HttpPost]
         public ActionResult AddCompany(SuperCompanyPureVM company)

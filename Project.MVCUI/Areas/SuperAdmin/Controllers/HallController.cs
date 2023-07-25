@@ -3,6 +3,7 @@ using Project.ENTITIES.Models;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminResponseModels.SuperAdminPureVMs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +37,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             }
             else
             {
-                halls = _hRep.Select(x => new SuperHallPureVM
+                halls = _hRep.Where(x=>x.ID==id).Select(x => new SuperHallPureVM
                 {
                     ID = x.ID,
                     HallNumber = x.HallNumber,
@@ -48,7 +49,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
                 
             }
           
-            
+            return View(halls);
         }
 
     }

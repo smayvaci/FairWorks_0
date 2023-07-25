@@ -1,8 +1,13 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRep;
 using Project.ENTITIES.Models;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.ListPageVMs;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.UpdatePageVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.AddRequestModels;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.UpdateRequestModels;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminResponseModels.SuperAdminPureVMs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +32,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
                 jobs = _jRep.Select(x => new SuperJobPureVM
                 {
                     ID = x.ID,
-                    JobName = x.JobName,
+                    Name = x.JobName,
                     DataStatus = x.DataStatus.ToString(),
                     CreatedDate = x.CreatedDate,
                     UpdatedDate = x.UpdatedDate,
@@ -36,10 +41,10 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             }
             else
             {
-                jobs =_jRep.Select(x => new SuperJobPureVM
+                jobs =_jRep.Where(x=>x.ID==id).Select(x => new SuperJobPureVM
                 {
                     ID = x.ID,
-                    JobName = x.JobName,
+                    Name = x.JobName,
                     DataStatus = x.DataStatus.ToString(),
                     CreatedDate = x.CreatedDate,
                     UpdatedDate = x.UpdatedDate,
@@ -77,7 +82,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         public ActionResult UpdateJob(int id)
         {
             Job selected = _jRep.Find(id);
-            AddUpdateJobPageVM jpvm = new AddUpdateJobPageVM
+            UpdateJobPageVM jpvm = new UpdateJobPageVM
             {
                 Job = new UpdateJobRequestModel
                 {

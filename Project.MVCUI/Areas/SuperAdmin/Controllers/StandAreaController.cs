@@ -2,8 +2,11 @@
 using Project.ENTITIES.Enums;
 using Project.ENTITIES.Models;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.UpdatePageVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.AddRequestModels;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.UpdateRequestModels;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminResponseModels.SuperAdminPureVMs;
 using System;
 using System.Collections.Generic;
@@ -21,52 +24,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         {
             _saRep = new StandAreaRepository();
         }
-        public ActionResult ListStandAreas(int? id)
-        {
-            List<SuperStandAreaPureVM> standAreas;
-            if (id == null)
-            {
-                standAreas = _saRep.Select(x => new SuperStandAreaPureVM
-                {
-                    ID = x.ID,
-                    StandAreaCode = x.StandAreaCode,
-                    StandType = x.StandType,
-                    Width = x.Width,
-                    Height = x.Height,
-                    M2Price = x.M2Price,
-                    DataStatus = x.DataStatus.ToString(),
-                    CreatedDate = x.CreatedDate,
-                    UpdatedDate = x.UpdatedDate,
-                    DeletedDate = x.DeletedDate,
-
-                }).ToList();
-            }
-            else
-            {
-                standAreas = _saRep.Select(x =>new SuperStandAreaPureVM
-                {
-                    ID = x.ID,
-                    StandAreaCode = x.StandAreaCode,
-                    StandType = x.StandType,
-                    Width = x.Width,
-                    Height = x.Height,
-                    M2Price = x.M2Price,
-                    DataStatus = x.DataStatus.ToString(),
-                    CreatedDate = x.CreatedDate,
-                    UpdatedDate = x.UpdatedDate,
-                    DeletedDate = x.DeletedDate,
-                }).ToList();
-            }
-            ListStandAreaPageVM sapvm = new ListStandAreaPageVM
-            {
-                Areas = standAreas,
-            };
-            return View(sapvm);
-        }
-        public ActionResult AddStandArea()
-        {
-            return View();
-        }
+      //todo list actionını yaz
         [HttpPost]
         public ActionResult AddStandArea(AddStandAreaRequestModel standArea)
         {
@@ -93,7 +51,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         public ActionResult UpdateStandArea(int id)
         {
             StandArea selected = _saRep.Find(id);
-            AddUpdateStandAreaPageVM sapvm = new AddUpdateStandAreaPageVM
+            UpdateStandAreaPageVM sapvm = new UpdateStandAreaPageVM
             {
                 StandArea = new UpdateStandAreaRequestModel
                 {

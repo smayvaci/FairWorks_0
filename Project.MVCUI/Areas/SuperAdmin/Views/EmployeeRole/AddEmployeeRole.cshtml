@@ -1,0 +1,53 @@
+﻿@model AddUpdateEmployeeRolePageVM
+@{
+    ViewBag.Title = "AddEmployeeRole";
+}
+
+<h2>AddEmployeeRole</h2>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.EmployeeRole.ID)
+    <div>
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Çalışan Görevi Ekleme Sayfası
+                </header>
+                <div class="form-group">
+                    <label class="col-sm-2">
+                        Görev Adı
+                    </label>
+                    <div> @Html.TextBoxFor(x => x.EmployeeRole.TitleName, new { @class = "form-control-genislik" })</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2">
+                        Departman
+                    </label>
+                    <div> @Html.TextBoxFor(x => x.EmployeeRole.Department, new { @class = "form-control-genislik" })</div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2">
+                        Açıklama
+                    </label>
+                    <div> @Html.TextBoxFor(x => x.EmployeeRole.Description, new { @class = "form-control-genislik" })</div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">
+                        İşlem
+                    </label>
+                    <div class="col-sm-10">
+                        <button class="btn btn-primary">
+                            Ekle
+                        </button>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+}
+
+

@@ -5,18 +5,18 @@ using System.Web;
 
 namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminResponseModels.SuperAdminPureVMs
 {
-    public class SuperStandAreaPureVM
+    public class SuperAdditionalServicePureVM
     {
         public int ID { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
         public string DataStatus { get; set; }
-        public string StandAreaCode { get; set; }// stand area kodu
-        public string StandType { get; set; }// stand tipi hazır mı boş mu
-        public double Width { get; set; }// genişlik
-        public double Height { get; set; }// uzunluk
-        public decimal M2Price { get; set; }// m2 fiyatı
-        public int? HallID { get; set; }
+        public bool TapWater { get; set; }// su isteği
+        public bool CompressedAir { get; set; }// basınçlı hava
+        public bool WasteWater { get; set; }// atık su
+        public bool Electricity { get; set; }// elektrik
+        public decimal ExtraPrice { get; set; }
+        public int? SaleID { get; set; }
     }
 }

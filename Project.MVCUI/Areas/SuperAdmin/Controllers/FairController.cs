@@ -1,8 +1,13 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRep;
 using Project.ENTITIES.Models;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.ListPageVMs;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.UpdatePageVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.AddRequestModels;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.UpdateRequestModels;
+using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminResponseModels.SuperAdminPureVMs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +46,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             }
             else
             {
-                fairs = _fRep.Select(x => new SuperFairPureVM
+                fairs = _fRep.Where(x=>x.ID==id).Select(x => new SuperFairPureVM
                 {
                     ID = x.ID,
                     EntranceDoor = x.EntranceDoor,
@@ -92,7 +97,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         public ActionResult UpdateFair(int id)
         {
             Fair selected = _fRep.Find(id);
-            AddUpdateFairPageVM f = new AddUpdateFairPageVM
+            UpdateFairPageVM f = new UpdateFairPageVM
             {
                 Fair = new UpdateFairRequestModel
                 {

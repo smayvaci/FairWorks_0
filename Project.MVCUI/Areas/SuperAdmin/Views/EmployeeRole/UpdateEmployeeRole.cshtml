@@ -1,0 +1,54 @@
+﻿@model AddUpdateEmployeeRolePageVM
+@{
+    ViewBag.Title = "UpdateEmployeeRole";
+}
+
+<h2>UpdateEmployeeRole</h2>
+@using (Html.BeginForm("UpdateEmployeeRole","EmployeeRole",FormMethod.Post,new { enctype = "multipart/form-data" }))
+{
+@Html.HiddenFor(x=>x.EmployeeRole.ID)
+    <div>
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Çalışan Görevi Güncelleme Sayfası
+                </header>
+                <div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2">
+                        Görev Adı
+                    </label>
+                    <div> @Html.TextBoxFor(x => x.EmployeeRole.TitleName, new { @class = "form-control-genislik" })</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2">
+                        Departman
+                    </label>
+                    <div> @Html.TextBoxFor(x => x.EmployeeRole.Department, new { @class = "form-control-genislik" })</div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2">
+                        Açıklama
+                    </label>
+                    <div> @Html.TextBoxFor(x => x.EmployeeRole.Description, new { @class = "form-control-genislik" })</div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">
+                        İşlem
+                    </label>
+                    <div class="col-sm-10">
+                        <button class="btn btn-primary">
+                            Güncelle
+                        </button>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+}
+
