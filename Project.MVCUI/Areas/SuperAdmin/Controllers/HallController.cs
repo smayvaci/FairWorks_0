@@ -1,8 +1,5 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRep;
 using Project.ENTITIES.Models;
-using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs;
-using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs;
-using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminResponseModels.SuperAdminPureVMs;
 using System;
 using System.Collections.Generic;

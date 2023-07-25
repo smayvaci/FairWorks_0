@@ -1,10 +1,7 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRep;
 using Project.ENTITIES.Models;
-using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.ListPageVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.UpdatePageVMs;
-using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPureVMs;
-using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.AddRequestModels;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.UpdateRequestModels;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminResponseModels.SuperAdminPureVMs;

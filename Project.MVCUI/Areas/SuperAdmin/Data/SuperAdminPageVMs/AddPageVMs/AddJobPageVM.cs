@@ -1,5 +1,4 @@
 ﻿using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.AddRequestModels;
-using Project.MVCUI.Areas.SuperAdmjobin.Data.SuperAdminRequestModels.AddRequestModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
