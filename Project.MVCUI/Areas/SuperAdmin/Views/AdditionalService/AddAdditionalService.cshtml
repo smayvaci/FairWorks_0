@@ -1,0 +1,147 @@
+﻿@model AddAdditionalServicePageVM
+
+@{
+    ViewData["Title"] = "AddAdditionalService";
+}
+
+<h2>AddAdditionalService</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        <div class="col-sm-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    Ekstra Servis Ekleme Sayfası
+                </header>
+
+                <div class="form-group">
+                    <label class="col-sm-2">
+                        Musluk suyu var mı?
+                    </label>
+                    <div class="col-sm-10">
+                        @Html.CheckBoxFor(x => x.AdditionalService.TapWater, new { @class = "form-control-genislik", id = "tapWater" })
+                    </div>
+                </div>
+
+                <div class="form-group" id="tapWaterPrice" style="display: none;">
+                    <label class="col-sm-2">
+                        Fiyat Girin:
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control-genislik" id="tapWaterPriceInput" name="price" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2">
+                        Basınçlı Hava var mı?
+                    </label>
+                    <div class="col-sm-10">
+                        @Html.CheckBoxFor(x => x.AdditionalService.CompressedAir, new { @class = "form-control-genislik", id = "compressedAir" })
+                    </div>
+                </div>
+
+                <div class="form-group" id="compressedAirPrice" style="display: none;">
+                    <label class="col-sm-2">
+                        Fiyat Girin:
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control-genislik" id="compressedAirPriceInput" name="price" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2">
+                        Atık suyu var mı?
+                    </label>
+                    <div class="col-sm-10">
+                        @Html.CheckBoxFor(x => x.AdditionalService.WasteWater, new { @class = "form-control-genislik", id = "wasteWater" })
+                    </div>
+                </div>
+
+                <div class="form-group" id="wasteWaterPrice" style="display: none;">
+                    <label class="col-sm-2">
+                        Fiyat Girin:
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control-genislik" id="wasteWaterPriceInput" name="price" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2">
+                        Elektrik var mı?
+                    </label>
+                    <div class="col-sm-10">
+                        @Html.CheckBoxFor(x => x.AdditionalService.Electricity, new { @class = "form-control-genislik", id = "electricity" })
+                    </div>
+                </div>
+
+                <div class="form-group" id="electricityPrice" style="display: none;">
+                    <label class="col-sm-2">
+                        Fiyat Girin:
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control-genislik" id="electricityPriceInput" name="price" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2">
+                        İşlem
+                    </label>
+                    <div class="col-sm-10">
+                        <button class="btn btn-primary">
+                            Ekle
+                        </button>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+}
+@*
+        <script>
+        $("#tapWater").change(function () {
+            if ($(this).is(":checked")) {
+                $("#tapWaterPrice").show();
+            } else {
+                $("#tapWaterPrice").hide();
+            }
+        });
+
+        $("#compressedAir").change(function () {
+            if ($(this).is(":checked")) {
+                $("#compressedAirPrice").show();
+            } else {
+                $("#compressedAirPrice").hide();
+            }
+        });
+
+        $("#wasteWater").change(function () {
+            if ($(this).is(":checked")) {
+                $("#wasteWaterPrice").show();
+            } else {
+                $("#wasteWaterPrice").hide();
+            }
+        });
+
+        $("#electricity").change(function () {
+            if ($(this).is(":checked")) {
+                $("#electricityPrice").show();
+            } else {
+                $("#electricityPrice").hide();
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+*@

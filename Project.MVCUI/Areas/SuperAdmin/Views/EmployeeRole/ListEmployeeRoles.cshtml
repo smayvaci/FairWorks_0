@@ -1,57 +1,38 @@
-﻿@model ListEmployeeRolePageVM
-@{
-    ViewBag.Title = "ListEmployeeRoles";
-}
-<header class="panel-heading">
-    @Html.ActionLink("Çalışan Rolü ekle", "AddEmployeeRole", null, new { @class = "btn btn-primary" })
-</header>
-<div class="panel-body">
-    <div class="adv-table">
-
-        <table cellpadding="0" border="0" class="display table table-bordered" id="hidden-table-info">
-
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Rol Adı</th>
-                    <th>Departman</th>
-                    <th>Açıklaması</th>
-                    <th class="hidden-phone"> Durum </th>
-                    <th class="hidden-phone">  Yaratma Tarihi  </th>
-                    <th class="hidden-phone">  Güncelleme Tarihi  </th>
-                    <th class="hidden-phone">  Silme Tarihi  </th>
-                    <th class="hidden-phone">  Sil </th>
-                    <th class="hidden-phone">  Güncelle  </th>
-                </tr>
-            </thead>
-
-            <tbody>
-                @foreach (SuperEmployeeRolePureVM item in Model.EmployeeRoles)
-                {
-                    <tr class="grandeX">
-                        <td>@item.ID</td>
-                        <td class="hidden-phone">@item.TitleName</td>
-                        <td class="hidden-phone">@item.Department</td>
-                        <td class="hidden-phone">@item.Description</td>
-                        <td class="hidden-phone">@item.DataStatus</td>
-                        <td class="hidden-phone">@item.CreatedDate</td>
-                        <td class="hidden-phone">@item.UpdatedDate</td>
-                        <td class="hidden-phone">@item.DeletedDate</td>
-                        <td class="hidden-phone">
-                            @Html.ActionLink("Sil", "DeleteEmployeeRole", new { id = item.ID }, new
-                   { @class = "btn btn-danger" })
-                        </td>
-                        <td class="hidden-phone">@Html.ActionLink("Güncelle", "UpdateEmployeeRole", new { id = item.ID }, new { @class = "btn btn-warning" })</td>
-                    </tr>
-                }
-            </tbody>
+﻿List<SuperEmployeeRolePureVM>
+    eRoles;
+    if (id == null)
+    {
+    eRoles=_eRoleRep.Select(x=> new SuperEmployeeRolePureVM
+    {
+    ID=x.ID,
+    TitleName = x.TitleName,
+    Department=x.Department,
+    Description = x.Description,
+    CreatedDate = x.CreatedDate,
+    UpdatedDate = x.UpdatedDate,
+    DeletedDate = x.DeletedDate,
+    DataStatus=x.DataStatus.ToString(),
 
 
-        </table>
+    }).ToList();
+    }
+    else
+    {
+    eRoles = _eRoleRep.Where(x=>x.ID==id).Select(x => new SuperEmployeeRolePureVM
+    {
+    ID=x.ID,
+    TitleName = x.TitleName,
+    Department = x.Department,
+    Description = x.Description,
+    CreatedDate = x.CreatedDate,
+    UpdatedDate = x.UpdatedDate,
+    DeletedDate = x.DeletedDate,
+    DataStatus = x.DataStatus.ToString(),
 
-    </div>
-</div>
 
-<div>
-<a href="http://localhost:50423/SuperAdmin/Home/Index" class="btn btn-primary">Ana Sayfa</a>
-</div>
+    }).ToList();
+    }
+    ListEmployeeRolePageVM epm = new ListEmployeeRolePageVM
+    {
+    EmployeeRoles = eRoles,
+    };

@@ -8,13 +8,15 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.UpdateRequ
 {
     public class UpdateAdditionalServiceRequestModel
     {
-        [Required(ErrorMessage = "Ekstra Servis Adı Zorunludur.")]
-        [StringLength(25, ErrorMessage = "Servis adı maksimum 25 karakter olmalıdır.")]
         public int ID { get; set; }
         public bool TapWater { get; set; }// su isteği
+        public decimal TapWaterPrice { get; set; }
         public bool CompressedAir { get; set; }// basınçlı hava
+        public decimal CompressedAirPrice { get; set; }
         public bool WasteWater { get; set; }// atık su
+        public decimal WasteWaterPrice { get; set; }
         public bool Electricity { get; set; }// elektrik
-        public decimal ExtraPrice { get; set; }
+        public decimal ElectricityPrice { get; set; }
+        public decimal SubTotalPrice { get; set; }
     }
 }

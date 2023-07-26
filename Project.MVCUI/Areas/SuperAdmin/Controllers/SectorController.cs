@@ -1,9 +1,7 @@
 ﻿using Project.BLL.DesignPatterns.GenericRepository.ConcRep;
 using Project.ENTITIES.Models;
-using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.ListPageVMs;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminPageVMs.UpdatePageVMs;
-using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.AddRequestModels;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.UpdateRequestModels;
 using Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminResponseModels.SuperAdminPureVMs;
@@ -40,7 +38,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             }
             else 
             {
-                sectors = _sRep.Select(x=> new SuperSectorPureVM 
+                sectors = _sRep.Where(x=> x.ID==id).Select(x=> new SuperSectorPureVM 
                 {
                     ID = x.ID,
                     SectorName = x.SectorName,

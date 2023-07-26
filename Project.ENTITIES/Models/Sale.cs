@@ -9,7 +9,7 @@ namespace Project.ENTITIES.Models
     public class Sale:BaseEntity
     {
        
-        public decimal SubTotal { get; set; }
+        public decimal SalePrice { get; set; }
         public DateTime SaleDate { get; set; }
         public int? PaymentScheduleID { get; set; }
         public int? AdditionalServiceID { get; set; }

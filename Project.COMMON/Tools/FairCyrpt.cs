@@ -5,84 +5,46 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cryptology
+namespace Project.COMMON.Tools
 {
-    public class FairCyrpt
+    public static class FairCyrpt
     {
-        // Caesar Şifreleme Anahtar Değeri
-        private int key;
 
-        public FairCyrpt(int key)
+
+        public static string Cyrpt(string plainText, int shift)
         {
-            this.key = key;
-        }
+            if (string.IsNullOrEmpty(plainText))
+                return string.Empty;
 
-        // Metni şifrelemek için kullanılır
-        public string Crypt(string text)
-        {
-            StringBuilder encryptedText = new StringBuilder();//dilinde metin manipülasyonu için kullanılan bir sınıftır. 
+            shift %= 26; 
 
-            foreach (char c in text)
+            char[] encryptedChars = new char[plainText.Length];
+
+            for (int i = 0; i < plainText.Length; i++)
             {
-                if (char.IsLetter(c))
+                char ch = plainText[i];
+
+                if (char.IsLetter(ch))
                 {
-                    char encryptedChar = (char)(c + key);
-
-                    if (char.IsLower(c))
-                    {
-                        if (encryptedChar > 'z')
-                            encryptedChar = (char)(encryptedChar - 26);
-                    }
-                    else if (char.IsUpper(c))
-                    {
-                        if (encryptedChar > 'Z')
-                            encryptedChar = (char)(encryptedChar - 26);
-                    }
-
-                    encryptedText.Append(encryptedChar);// append metodu stringbuilder içerisinde metin eklemek veya metinleri birleştirmek için kullanılır.Metinleri birleştirme işlemleri için daha verimli bir yöntem olduğu için bu kullanıldı
+                    char baseChar = char.IsUpper(ch) ? 'A' : 'a';
+                    encryptedChars[i] = (char)(((ch - baseChar + shift) % 26) + baseChar);
                 }
                 else
                 {
-                    encryptedText.Append(c);
+                    encryptedChars[i] = ch;
                 }
             }
 
-            return encryptedText.ToString();
+            return new string(encryptedChars);
         }
 
-        // Şifrelenmiş metni çözmek için kullanılır
-        public string Decrypt(string encryptedText)
+        public static string Decrypt(string encryptedText, int shift)
         {
-            StringBuilder decryptedText = new StringBuilder();
-
-            foreach (char c in encryptedText)
-            {
-                if (char.IsLetter(c))
-                {
-                    char decryptedChar = (char)(c - key);
-
-                    if (char.IsLower(c))
-                    {
-                        if (decryptedChar < 'a')
-                            decryptedChar = (char)(decryptedChar + 26);
-                    }
-                    else if (char.IsUpper(c))
-                    {
-                        if (decryptedChar < 'A')
-                            decryptedChar = (char)(decryptedChar + 26);
-                    }
-
-                    decryptedText.Append(decryptedChar);
-                }
-                else
-                {
-                    decryptedText.Append(c);
-                }
-            }
-
-            return decryptedText.ToString();
+            return Cyrpt(encryptedText, 26 - shift);
         }
     }
 
+
+
 }
-}
+

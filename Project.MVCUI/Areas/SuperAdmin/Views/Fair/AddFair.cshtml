@@ -1,0 +1,80 @@
+﻿@model AddFairPageVM
+@{
+    ViewBag.Title = "AddFair";
+}
+
+<h2>AddFair</h2>
+@using (Html.BeginForm())
+{
+<div>
+    <div class="col-sm-12">
+        <section class="panel">
+            <header class="panel-heading">
+                Fuar Ekleme Sayfası
+            </header>
+
+            <div class="form-group">
+
+                <label class="col-sm-2"> Fuar Adı</label>
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(x => x.Fair.FairName, new { @class = "form-control-genislik" })
+                </div>
+            </div>
+
+            <div>
+                <label class="col-sm-2"> Giriş Kapıları</label>
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(x => x.Fair.EntranceDoor, new
+                    { @class = "form-control-genislik" })
+                </div>
+            </div>
+
+            <div>
+                <label class="col-sm-2"> Çıkış Kapıları</label>
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(x => x.Fair.ExitDoor, new
+                    { @class = "form-control-genislik" })
+                </div>
+            </div>
+
+            <div>
+                <label class="col-sm-2"> Başlangıç Tarihi</label>
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(x => x.Fair.StartDate, new
+                    { @class = "form-control-genislik" })
+                </div>
+            </div>
+
+            <div>
+                <label class="col-sm-2"> Bitiş Tarihi</label>
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(x => x.Fair.ExpiryDate, new
+                    { @class = "form-control-genislik" })
+                </div>
+            </div>
+
+            <div>
+                <label class="col-sm-2"> Lokasyon</label>
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(x => x.Fair.Location, new
+                    { @class = "form-control-genislik" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2">
+                    İşlem
+                </label>
+                <div class="col-sm-10">
+                    <button class="btn btn-primary">
+                        Ekle
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+</div>
+
+}

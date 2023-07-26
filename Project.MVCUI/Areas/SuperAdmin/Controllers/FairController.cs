@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace Project.MVCUI.Areas.SuperAdmin.Controllers
 {
@@ -29,6 +30,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
                 fairs= _fRep.Select(x => new SuperFairPureVM
                 {
                     ID = x.ID,
+                    FairName = x.FairName,
                     EntranceDoor = x.EntranceDoor,
                     ExitDoor = x.ExitDoor,
                     StartDate = x.StartDate,
@@ -46,6 +48,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
                 fairs = _fRep.Where(x=>x.ID==id).Select(x => new SuperFairPureVM
                 {
                     ID = x.ID,
+                    FairName = x.FairName,
                     EntranceDoor = x.EntranceDoor,
                     ExitDoor = x.ExitDoor,
                     StartDate = x.StartDate,
@@ -75,6 +78,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             {
                 Fair f = new Fair
                 {
+                    FairName=fair.FairName,
                     EntranceDoor = fair.EntranceDoor,
                     ExitDoor = fair.ExitDoor,
                     StartDate = fair.StartDate,
@@ -99,6 +103,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
                 Fair = new UpdateFairRequestModel
                 {
                     ID = selected.ID,
+                    FairName = selected.FairName,
                     EntranceDoor = selected.EntranceDoor,
                     ExitDoor = selected.ExitDoor,
                     StartDate = selected.StartDate,
@@ -114,6 +119,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             if (ModelState.IsValid)
             {
                 Fair toBeUpdated = _fRep.Find(fair.ID);
+                toBeUpdated.FairName = fair.FairName;
                 toBeUpdated.EntranceDoor = fair.EntranceDoor;
                 toBeUpdated.ExitDoor = fair.ExitDoor;
                 toBeUpdated.StartDate = fair.StartDate;

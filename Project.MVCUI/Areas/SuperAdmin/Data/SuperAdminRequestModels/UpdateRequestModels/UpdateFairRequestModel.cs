@@ -10,6 +10,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.UpdateRequ
     {
         [Required(ErrorMessage = "Fuar Adı Zorunludur.")]
         [StringLength(25, ErrorMessage = "Fuar Adı maksimum 25 Karakter Olmalıdır.")]
+        public string FairName { get; set; }
         public int ID { get; set; }
         public string EntranceDoor { get; set; }// girişi kapı
         public string ExitDoor { get; set; }// çıkış kapı

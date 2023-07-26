@@ -24,7 +24,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         {
             _adRep = new AdditionalServiceRepository();
         }
-        public ActionResult ListAdditionalService(int? id)
+        public ActionResult ListAdditionalServices(int? id)
         {
             List<SuperAdditionalServicePureVM> additionalservices;
             if (id == null)
@@ -33,10 +33,14 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
                 {
                     ID = x.ID,
                     TapWater = x.TapWater,
+                    TapWaterPrice = x.TapWaterPrice,
                     WasteWater = x.WasteWater,
+                    WasteWaterPrice = x.WasteWaterPrice,
                     Electricity = x.Electricity,
-                    ExtraPrice = x.ExtraPrice,
+                    ElectricityPrice = x.ElectricityPrice,
+                    SubTotalPrice = x.SubTotalPrice,
                     CompressedAir = x.CompressedAir,
+                    CompressedAirPrice = x.CompressedAirPrice,
                     DataStatus = x.DataStatus.ToString(),
                     CreatedDate = x.CreatedDate,
                     UpdatedDate = x.UpdatedDate,
@@ -45,13 +49,18 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             }
             else
             {
-                additionalservices =_adRep.Select(x => new SuperAdditionalServicePureVM
-                {   ID = x.ID,
+                additionalservices =_adRep.Where(x=> x.ID==id).Select(x => new SuperAdditionalServicePureVM
+                {
+                    ID = x.ID,
                     TapWater = x.TapWater,
+                    TapWaterPrice = x.TapWaterPrice,
                     WasteWater = x.WasteWater,
+                    WasteWaterPrice = x.WasteWaterPrice,
                     Electricity = x.Electricity,
-                    ExtraPrice = x.ExtraPrice,
+                    ElectricityPrice = x.ElectricityPrice,
+                    SubTotalPrice = x.SubTotalPrice,
                     CompressedAir = x.CompressedAir,
+                    CompressedAirPrice = x.CompressedAirPrice,
                     DataStatus = x.DataStatus.ToString(),
                     CreatedDate = x.CreatedDate,
                     UpdatedDate = x.UpdatedDate,
@@ -76,16 +85,21 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         {
             if (ModelState.IsValid)
             {
-                AdditionalService ad1 = new AdditionalService
+                AdditionalService x = new AdditionalService
                 {
+                   
                     TapWater = additionalservice.TapWater,
-                    WasteWater= additionalservice.WasteWater,
-                    Electricity= additionalservice.Electricity,
-                    ExtraPrice = additionalservice.ExtraPrice,
+                    TapWaterPrice = additionalservice.TapWaterPrice,
+                    WasteWater = additionalservice.WasteWater,
+                    WasteWaterPrice = additionalservice.WasteWaterPrice,
+                    Electricity = additionalservice.Electricity,
+                    ElectricityPrice = additionalservice.ElectricityPrice,
+                    SubTotalPrice = additionalservice.SubTotalPrice,
                     CompressedAir = additionalservice.CompressedAir,
+                    CompressedAirPrice = additionalservice.CompressedAirPrice,
                     CreatedDate = DateTime.Now,
                 };
-                _adRep.Add(ad1);
+                _adRep.Add(x);
                 return RedirectToAction("ListAdditionalServices");
             }
             else
@@ -102,10 +116,15 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
                 {
                     ID = selected.ID,
                     TapWater = selected.TapWater,
-                    WasteWater= selected.WasteWater,
-                    Electricity= selected.Electricity,
-                    ExtraPrice = selected.ExtraPrice,
+                    TapWaterPrice = selected.TapWaterPrice,
+                    WasteWater = selected.WasteWater,
+                    WasteWaterPrice = selected.WasteWaterPrice,
+                    Electricity = selected.Electricity,
+                    ElectricityPrice = selected.ElectricityPrice,
+                    SubTotalPrice = selected.SubTotalPrice,
                     CompressedAir = selected.CompressedAir,
+                    CompressedAirPrice = selected.CompressedAirPrice,
+    
 
                 }
             };
@@ -118,10 +137,16 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
             {
                AdditionalService selected = _adRep.Find(additionalservice.ID);
                 selected.TapWater = additionalservice.TapWater;
+                selected.TapWaterPrice = additionalservice.
+                    TapWaterPrice;
                 selected.WasteWater = additionalservice.WasteWater;
+                selected.WasteWaterPrice = additionalservice.WasteWaterPrice;
                 selected.Electricity = additionalservice.Electricity;
-                selected.ExtraPrice = additionalservice.ExtraPrice;
+                selected.ElectricityPrice = additionalservice.ElectricityPrice;
                 selected.CompressedAir = additionalservice.CompressedAir;
+                selected.CompressedAirPrice = additionalservice.
+                    CompressedAirPrice;
+                selected.SubTotalPrice = additionalservice.SubTotalPrice;
                 _adRep.Update(selected);
                 return RedirectToAction("ListAdditionalServices");
 

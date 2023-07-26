@@ -1,52 +1,48 @@
 ﻿@model ListCompanyTypePageVM
-
 @{
-    ViewBag.Title = "CompanyTypes";
+    ViewBag.Title = "ListCompanyTypes";
 }
 
+<h2>ListCompanyTypes</h2>
 <header class="panel-heading">
-    @Html.ActionLink("Şirket Tipi Ekle ", "AddCompanyType", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Şirket Tipi Ekle", "AddCompanyType", null, new { @class = "btn btn-success" })
 </header>
+
 <div class="panel-body">
     <div class="adv-table">
         <table cellpadding="0" border="0" class="display table table-bordered" id="hidden-table-info">
-            
             <thead>
                 <tr>
-                    <th>Şirket Tipi</th>
-                    <th class="hidden-phone">Durum</th>
-                    <th class="hidden-phone">Yaratılma Tarihi</th>
-                    <th class="hidden-phone">Güncelleme Tarihi</th>
-                    <th class="hidden-phone">Silme Tarihi</th>
-                    <th class="hidden-phone">Sil</th>
-                    <th class="hidden-phone">Güncelle</th>
-
+                    <th>ID</th>
+                    <th> Şirket Tipi</th>
+                    <th> Durumu</th>
+                    <th> Oluşturulma Tarihi</th>
+                    <th> Güncelleme Tarihi</th>
+                    <th> Silme Tarihi</th>
+                    <th> Güncelle</th>
+                    <th> Sil</th>
                 </tr>
             </thead>
-            
+
             <tbody>
                 @foreach (SuperCompanyTypePureVM item in Model.CompanyTypes)
                 {
-                    <tr class="grandeX">
-                        <td class="hidden-phone">@item.CompanyTypeName</td>
-                        <td class="hidden-phone">@item.DataStatus</td>
-                        <td class="hidden-phone">@item.CreatedDate</td>
-                        <td class="hidden-phone">@item.UpdatedDate</td>
-                        <td class="hidden-phone">@item.DeletedDate</td>
-                        <td class="hidden-phone">
-                            @Html.ActionLink("Sil", "DeleteCompanyType", new { id = item.ID }, new
-                   { @class = "btn btn-danger" })
-                        </td>
-                        <td class="hidden-phone">@Html.ActionLink("Güncelle", "UpdateCompanyType", new { id = item.ID }, new { @class = "btn btn-warning" })</td>
+                    <tr>
+                        <td>@item.ID</td>
+                        <td>@item.CompanyTypeName</td>
+                        <td>@item.DataStatus</td>
+                        <td>@item.CreatedDate</td>
+                        <td>@item.UpdatedDate</td>
+                        <td>@item.DeletedDate</td>
+                        <td>@Html.ActionLink("Güncelle", "UpdateCompanyType", new { @class = "btn btn-warning" }, new { id = item.ID })</td>
+                        <td>@Html.ActionLink("Sil", "DeleteCompanyType", new { @class = "btn btn-danger" }, new { id = item.ID })</td>
                     </tr>
                 }
             </tbody>
         </table>
-
     </div>
 </div>
 
 <div>
     <a href="http://localhost:50423/SuperAdmin/Home/Index" class="btn btn-primary">Ana Sayfa</a>
 </div>
-

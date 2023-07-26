@@ -67,8 +67,8 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
         [HttpPost]
         public ActionResult AddCompanyType(AddCompanyTypeRequestModel type)
         {
-            if (ModelState.IsValid)
-            {
+        
+          
                 CompanyType cT = new CompanyType
                 {
                     CompanyTypeName= type.CompanyTypeName,
@@ -76,12 +76,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Controllers
                 };
                 _cTRep.Add(cT);
                 return RedirectToAction("ListCompanyTypes");
-            }
-            else
-            {
-                return View();
-            }
-
+           
 
         }
         public ActionResult UpdateCompanyType(int id)

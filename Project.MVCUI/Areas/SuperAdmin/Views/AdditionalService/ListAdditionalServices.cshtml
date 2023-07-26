@@ -1,0 +1,67 @@
+﻿@model ListAdditionalServicePageVM
+@{
+    ViewBag.Title = "ListAdditionalService";
+}
+
+<h2>ListAdditionalService</h2>
+
+<header class="panel-heading">
+    @Html.ActionLink("Ekstra Servis Ekle", "AddAdditionalService", null, new { @class = "btn btn-success" })
+</header>
+<div class="panel-body">
+
+    <div class="adv-table">
+        <table cellpadding="0" border="0" class="display table table-bordered" id="hidden-table-info">
+            <thead>
+                <tr>
+                    <th> Musluk Suyu var mı</th>
+                    <th> Musluk Suyu Fiyatı</th>
+                    <th> Basınçlı Hava Var mı</th>
+                    <th> Basınçlı Hava Fiyatı</th>
+                    <th> Atık Su Var mı</th>
+                    <th> Atık Su Fiyatı</th>
+                    <th> Elektrik Var mı</th>
+                    <th> Elektrik Fiyatı</th>
+                    <th> Ara Toplam </th>
+                    <th> Durumu</th>
+                    <th> Oluşturulma Tarihi</th>
+                    <th> Güncellenme Tarihi</th>
+                    <th> Silinme Tarihi</th>
+                    <th> Güncelle</th>
+                    <th> Sil</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (SuperAdditionalServicePureVM item in Model.AdditionalServices)
+                {
+                    <tr>
+                        <td>@item.TapWater</td>
+                        <td>@item.TapWaterPrice</td>
+                        <td>@item.CompressedAir</td>
+                        <td>@item.CompressedAirPrice</td>
+                        <td>@item.WasteWater</td>
+                        <td>@item.WasteWaterPrice/td>
+                        <td>@item.Electricity</td>
+                        <td>@item.ElectricityPrice</td>
+                        <td>@item.SubTotalPrice</td>
+                        <td>@item.DataStatus</td>
+                        <td>@item.CreatedDate</td>
+                        <td>@item.UpdatedDate</td>
+                        <td>@item.DeletedDate</td>
+                        <td>@Html.ActionLink("Güncelle", "UpdateAdditionalService", new { @class = "btn btn-warning" }, new { id = item.ID })</td>
+                        <td>@Html.ActionLink("Sil", "DeleteAdditionalService", new { @class = "btn btn-danger" }, new { id = item.ID })</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<div>
+    <a href="http://localhost:50423/SuperAdmin/Home/Index" class="btn btn-primary">Ana Sayfa</a>
+</div>
+

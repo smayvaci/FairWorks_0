@@ -1,15 +1,14 @@
-﻿@model AddUpdateSectorPageVM
-
+﻿@model UpdateSectorPageVM
 @{
     ViewBag.Title = "UpdateSector";
 }
 
-<h2>Update Sector</h2>
+<h2>UpdateSector</h2>
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(x=> x.Sector.ID)
-    
+    @Html.HiddenFor(x => x.Sector.ID)
+
     <div>
         <div class="col-sm-12">
             <section class="panel">
@@ -43,5 +42,7 @@
         </div>
     </div>
 }
+
+
 
 

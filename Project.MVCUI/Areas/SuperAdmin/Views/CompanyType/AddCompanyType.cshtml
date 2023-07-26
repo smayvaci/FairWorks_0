@@ -1,10 +1,10 @@
-﻿@model  AddUpdateCompanyTypePageVM
+﻿@model AddCompanyTypePageVM
 @{
     ViewBag.Title = "AddCompanyType";
 }
 
+<h2>AddCompanyType</h2>
 
-<h2>Add Company Type</h2>
 
 @using (Html.BeginForm())
 {
@@ -14,28 +14,27 @@
                 <header class="panel-heading">
                     Şirket Tipi Ekleme Sayfası
                 </header>
-
                 <div class="form-group">
                     <label class="col-sm-2">
                         Şirket Tip Adı
                     </label>
                     <div class="col-sm-10">
                         @Html.TextBoxFor(x => x.CompanyType.CompanyTypeName, new { @class = "form-control-genislik" })
-
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2">
-                            İşlem
-                        </label>
-                        <div class="col-sm-10">
-                            <button class="btn btn-primary">
-                                Ekle
-                            </button>
-
-                        </div>
-
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="col-md-2">
+                        İşlem
+                    </label>
+                    <div class="col-sm-10">
+                        <button class="btn btn-primary">
+                            Ekle
+                        </button>
+
+                    </div>
+
+                </div>
+
             </section>
 
         </div>

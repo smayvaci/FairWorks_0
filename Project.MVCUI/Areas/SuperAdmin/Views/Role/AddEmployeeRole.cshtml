@@ -1,0 +1,50 @@
+﻿@model AddEmployeeRolePageVM
+@{
+    ViewBag.Title = "AddEmployeeRole";
+}
+
+<h2>AddEmployeeRole</h2>
+@using (Html.BeginForm())
+{
+
+    <div>
+        <div>
+            <section>
+                <div>
+                    <label>
+                        Görev Ekle
+                    </label>
+                    <div>
+                        @Html.TextBoxFor(x => x.EmployeeRole.TitleName)
+                    </div>
+
+                </div>
+                <div>
+                    <label>
+                        Departmanını Ekle
+                    </label>
+                    <div>
+                        @Html.TextBoxFor(x => x.EmployeeRole.Department)
+                    </div>
+                </div>
+                <div>
+                    <label>
+                        Açıklama Ekle
+                    </label>
+                    <div>
+                        @Html.TextBoxFor(x => x.EmployeeRole.Description)
+                    </div>
+                </div>
+                <div>
+                    <button>
+                        Ekle
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+}
+
+

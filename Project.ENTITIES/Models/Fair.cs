@@ -8,7 +8,7 @@ namespace Project.ENTITIES.Models
 {
     public class Fair:BaseEntity
     {
-      
+        public string FairName { get; set; }
         public string EntranceDoor { get; set; }
         public string ExitDoor { get; set; }
         public DateTime StartDate { get; set; }

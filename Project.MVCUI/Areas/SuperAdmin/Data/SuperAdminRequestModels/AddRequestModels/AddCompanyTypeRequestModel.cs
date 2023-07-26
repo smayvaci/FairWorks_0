@@ -8,8 +8,6 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.AddRequest
 {
     public class AddCompanyTypeRequestModel
     {
-        [Required(ErrorMessage = "Şirket tipi girilmesi Zorunludur.")]
-        [StringLength(25, ErrorMessage = "Şirket tip adı maksimum 25 karakter olmalıdır.")]
         public string CompanyTypeName { get; set; }
     }
 }

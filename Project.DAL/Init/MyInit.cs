@@ -94,7 +94,7 @@ namespace Project.DAL.Init
             e.FirstName = "Veli";
             e.LastName = "Toraman";
             e.UserName = "VToraman";
-            e.Password = DantexCrypt.Crypt("1234");
+            e.Password = FairCyrpt.Cyrpt("1234",26);
             e.EmployeeRole= eRole;
             context.Employees.Add(e);
             context.SaveChanges();
@@ -105,7 +105,7 @@ namespace Project.DAL.Init
             e1.FirstName = "Özgür";
             e1.LastName = "Belül";
             e1.UserName = "OBelul";
-            e1.Password = DantexCrypt.Crypt("1234");
+            e1.Password = FairCyrpt.Cyrpt("1234", 26);
             e1.EmployeeRole = eRole1;
             context.Employees.Add(e1);
             context.SaveChanges();
@@ -116,7 +116,7 @@ namespace Project.DAL.Init
             e2.FirstName = "Fenasi";
             e2.LastName = "Parlak";
             e2.UserName = "FParlak";
-            e2.Password = DantexCrypt.Crypt("1234");
+            e2.Password = FairCyrpt.Cyrpt("1234", 26);
             e2.EmployeeRole = eRole2;
             context.Employees.Add(e2);
             context.SaveChanges();
@@ -128,7 +128,7 @@ namespace Project.DAL.Init
             e3.LastName = "Toparlak";
             e3.UserName = "CToparlak";
             e3.ReportTo = 3;
-            e3.Password = DantexCrypt.Crypt("1234");
+            e3.Password = FairCyrpt.Cyrpt("1234", 26);
             e3.EmployeeRole = eRole3;
             context.Employees.Add(e3);
             context.SaveChanges();
@@ -139,7 +139,7 @@ namespace Project.DAL.Init
             e4.FirstName = "Celil";
             e4.LastName = "Deliçip";
             e4.UserName = "CDelicip";
-            e4.Password = DantexCrypt.Crypt("1234");
+            e4.Password = FairCyrpt.Cyrpt("1234", 26);
             e4.EmployeeRole = eRole4;
             context.Employees.Add(e4);
             context.SaveChanges();
@@ -150,7 +150,7 @@ namespace Project.DAL.Init
             e5.FirstName = "Hüsmen";
             e5.LastName = "Nakit";
             e5.UserName = "HNakit";
-            e5.Password = DantexCrypt.Crypt("1234");
+            e5.Password = FairCyrpt.Cyrpt("1234", 26);
             e5.EmployeeRole = eRole5;
             context.Employees.Add(e5);
             context.SaveChanges();
@@ -161,7 +161,7 @@ namespace Project.DAL.Init
             e6.FirstName = "Toraman";
             e6.LastName = "AtılKurt";
             e6.UserName = "TAtilkurt";
-            e6.Password = DantexCrypt.Crypt("1234");
+            e6.Password = FairCyrpt.Cyrpt("1234", 26);
             e6.EmployeeRole = eRole6;
             context.Employees.Add(e6);
             context.SaveChanges();
@@ -172,7 +172,7 @@ namespace Project.DAL.Init
             e7.FirstName = "Salma";
             e7.LastName = "Durmaz";
             e7.UserName = "SDurmaz";
-            e7.Password = DantexCrypt.Crypt("1234");
+            e7.Password = FairCyrpt.Cyrpt("1234", 26);
             e7.EmployeeRole = eRole7;
             context.Employees.Add(e7);
             context.SaveChanges();

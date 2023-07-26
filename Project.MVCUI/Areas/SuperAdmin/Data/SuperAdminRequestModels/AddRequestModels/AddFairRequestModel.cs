@@ -7,6 +7,7 @@ namespace Project.MVCUI.Areas.SuperAdmin.Data.SuperAdminRequestModels.AddRequest
 {
     public class AddFairRequestModel
     {
+        public string FairName { get; set; }
         public string EntranceDoor { get; set; }// girişi kapı
         public string ExitDoor { get; set; }// çıkış kapı
         public DateTime StartDate { get; set; }// başlangıç tarihi
